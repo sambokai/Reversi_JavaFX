@@ -1,10 +1,20 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.SampleController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Button text="Say 'Hello World'" onAction="#sayHelloWorld" />
-    <Label GridPane.rowIndex="1" fx:id="helloWorld" />
-</GridPane>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@sample_stylesheet.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab closable="false" text="Game">
+        <content>
+            <AnchorPane stylesheets="@sample_stylesheet.css">
+
+            </AnchorPane>
+        </content>
+    </Tab>
+    <Tab closable="false" text="Settings">
+
+    </Tab>
+  </tabs>
+</JFXTabPane>
