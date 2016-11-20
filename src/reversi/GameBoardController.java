@@ -46,11 +46,10 @@ public class GameBoardController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         width = 8;
         height = 8;
-        tile_size = 600 / width;
 
+        tile_size = 600 / width;
         readUserDifficulty();
         createContent();
-
     }
 
     public int readUserDifficulty(){

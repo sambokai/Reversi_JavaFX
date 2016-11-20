@@ -25,9 +25,6 @@ public class Main extends Application {
         primaryStage.setTitle("Reversi - (C) 2016 Sam Bokai");
         primaryStage.setScene(new Scene(root, 600, 630));
         primaryStage.setResizable(false);
-
-
-
         primaryStage.show();
 
     }
