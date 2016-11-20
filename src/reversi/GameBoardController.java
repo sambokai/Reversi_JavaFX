@@ -1,56 +1,73 @@
 package reversi;
 
+import com.jfoenix.controls.JFXTabPane;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
-import sun.plugin2.applet.Applet2ManagerCache;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class GameBoardController implements Initializable {
     @FXML public Tab gameTab;
-
+    @FXML public JFXTabPane tabPane;
     @FXML public Group boardGroup;
     @FXML public ToggleGroup difficultyToggleGroup;
 
     public int difficulty;
 
     private Group tileGroup = new Group();
-    private Group pieceGroup = new Group();
     @FXML public Pane gamePane;
 
+    int[][] internal_board;
     public static double tile_size;
     public static int width;
     public static int height;
 
 
+    public void setTile(int x, int y, int type){ //TODO: morgen hier weitermachen: implementieren, dass setTile() nur klappt falls *REGELN VON REVERSI ES ZULASSEN*
+        internal_board[x][y] = type;
+        updateRender();
+    }
 
-    public void createContent() {
-        gamePane.getChildren().setAll(tileGroup, pieceGroup);
+    public void updateRender() {
+        tileGroup.getChildren().clear();
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                Tile tile = new Tile(x,y);
+
+                Tile tile = new Tile(x,y,internal_board[x][y]);
                 tileGroup.getChildren().add(tile);
             }
         }
     }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        internal_board = new int[width][height];
+        gamePane.getChildren().setAll(tileGroup);
+
         width = 8;
         height = 8;
-
         tile_size = 600 / width;
+
         readUserDifficulty();
-        createContent();
+        resetBoard();
+
     }
+
+    private void resetBoard() {
+        internal_board = new int[width][height];
+        internal_board[(int) (width/2-0.5)][(int) (height/2-0.5)] = 1;
+        internal_board[(int) (width/2+0.5)][(int) (height/2-0.5)] = 2;
+        internal_board[(int) (width/2-0.5)][(int) (height/2+0.5)] = 2;
+        internal_board[(int) (width/2+0.5)][(int) (height/2+0.5)] = 1;
+        updateRender();
+    }
+
+
 
     public int readUserDifficulty(){
         RadioButton selectedDifficulty = (RadioButton) difficultyToggleGroup.getSelectedToggle();
