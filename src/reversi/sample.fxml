@@ -3,29 +3,45 @@
 <?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<JFXTabPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reversi.GameBoardController">
     <tabs>
-
-        <Tab fx:id="gameTab" closable="false" text="Game" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+        <Tab fx:id="gameTab" closable="false" text="Game">
          <content>
-            <BorderPane prefHeight="200.0" prefWidth="200.0">
-               <center>
-                  <Canvas fx:id="board_canvas" height="545.0" width="600.0" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets bottom="30.0" />
-                     </BorderPane.margin>
-                  </Canvas>
-               </center>
-            </BorderPane>
+<!--
+            <GridPane gridLinesVisible="true" fx:id="gameBoard" prefHeight="600" prefWidth="600">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+             -->
+         </content>
+         <content>
+            <Pane fx:id="gamePane" prefHeight="200.0" prefWidth="200.0" />
          </content>
         </Tab>
         <Tab closable="false" text="Settings">
@@ -33,9 +49,7 @@
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <VBox id="difficultyVBox" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                      <fx:define>
-                          <ToggleGroup fx:id="difficultyToggleGroup" />
-                      </fx:define>
+
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Difficulty" textAlignment="CENTER">
                            <VBox.margin>
@@ -45,16 +59,19 @@
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <JFXRadioButton text="Easy" toggleGroup="$difficultyToggleGroup">
+                        <JFXRadioButton fx:id="easy_radiobtn" text="Easy" toggleGroup="$difficultyToggleGroup">
                            <VBox.margin>
                               <Insets left="-10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="20.0" />
                            </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="difficultyToggleGroup" />
+                           </toggleGroup>
 
                         </JFXRadioButton>
-                        <JFXRadioButton selected="true" text="Medium" toggleGroup="$difficultyToggleGroup">
+                        <JFXRadioButton fx:id="medium_radiobtn" selected="true" text="Medium" toggleGroup="$difficultyToggleGroup">
                            <VBox.margin>
                               <Insets left="-10.0" />
                            </VBox.margin>
@@ -76,9 +93,7 @@
                      </HBox.margin>
                   </VBox>
                   <VBox id="gridsizeVBox" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                     <fx:define>
-                         <ToggleGroup fx:id="gridsizeToggleGroup" />
-                     </fx:define>
+
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grid Size" textAlignment="CENTER">
                            <VBox.margin>
@@ -88,13 +103,16 @@
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <JFXRadioButton text="6x6" toggleGroup="$gridsizeToggleGroup">
+                        <JFXRadioButton text="6x6">
                            <VBox.margin>
                               <Insets left="-10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="20.0" />
                            </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gridsizeToggleGroup" />
+                           </toggleGroup>
 
                         </JFXRadioButton>
                         <JFXRadioButton selected="true" text="8x8" toggleGroup="$gridsizeToggleGroup">
