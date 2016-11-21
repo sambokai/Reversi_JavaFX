@@ -73,8 +73,8 @@ public class GameBoardController implements Initializable {
     }
 
     private void mouseSetTile(MouseEvent mouse) {
-        double x = mouse.getX(), y = mouse.getY();
-        System.out.println(mouseXtoTileX(x));
+        int x = mouseXtoTileX(mouse.getX()), y = mouseYtoTileY(mouse.getY());
+        setTile(x,y,2);
 
     }
 
