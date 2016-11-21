@@ -51,6 +51,8 @@ public class Tile extends ImageView {
 
     }
 
+
+
     public int getTile_type() {
         return tile_type;
     }

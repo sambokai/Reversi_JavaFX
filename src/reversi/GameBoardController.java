@@ -1,14 +1,17 @@
 package reversi;
 
 import com.jfoenix.controls.JFXTabPane;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,6 +37,10 @@ public class GameBoardController implements Initializable {
         updateRender();
     }
 
+    public Pane getGamePane() {
+        return gamePane;
+    }
+
     public void updateRender() {
         tileGroup.getChildren().clear();
         for (int y = 0; y < height; y++) {
@@ -56,6 +63,27 @@ public class GameBoardController implements Initializable {
         readUserDifficulty();
         resetBoard();
 
+        gamePane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouse) {
+                mouseSetTile(mouse);
+            }
+        });
+
+    }
+
+    private void mouseSetTile(MouseEvent mouse) {
+        double x = mouse.getX(), y = mouse.getY();
+        System.out.println(mouseXtoTileX(x));
+
+    }
+
+    private int mouseXtoTileX(double x) {
+        return (int) (x / tile_size);
+    }
+
+    private int mouseYtoTileY(double y){
+        return (int) (y / tile_size);
     }
 
     private void resetBoard() {
