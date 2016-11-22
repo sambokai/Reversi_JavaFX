@@ -92,38 +92,46 @@ public class GameBoardController implements Initializable {
             return -1;
         }
 
-        /* Check if move is valid */
+        /* Check if move is valid and if valid add all affected tiles to the global tiles_to_turn array */
 
         //  Check EAST TO WEST
+        // if 1 tile LEFT to the cliked tile is owned by opponent, THEN continue:
         if (x < width && internal_board[x-1][y] == opposing_player) {
+
+            //array for tracking potential reverse-candidates
             int[][] temp_reverse = new int[width][height];
+            //temporarily track the, already checked, 1 tile LEFT to clicked tile
             temp_reverse[x-1][y] = 1;
-
-
-
+            //go through all tiles from EAST to WEST beginning at 2 tiles left to the clicked tile, since 1 tile left was already checked
             for (int x_pos= x - 2; x_pos >= 0; x_pos--){
 
-               if (internal_board[x_pos][y] == opposing_player){ // wenn auf einen gegnerischen stein gestoßen wird
+               //wenn auf einen gegnerischen Stein gestoßen wird
+               // füge ihn dem temporären tracking array hinzu
+               if (internal_board[x_pos][y] == opposing_player){
                     temp_reverse[x_pos][y] = 1;
-                   System.out.println("check: " + x_pos + ", " + y);
                 }
 
-                else if (internal_board[x_pos][y] == current_player) { //wenn auf eigenen stein gestoßen dann :
+                //wenn auf einen eigenen stein gestoßen wird ...
+                else if (internal_board[x_pos][y] == current_player) {
 
-
+                    // ... füge die temporär getrackten steine dem finalen tiles_to_turn hinzu ...
                     for (int print_x = 0; print_x < width; print_x++) {
                         for (int print_y = 0; print_y < height; print_y++) {
                             if (temp_reverse[print_x][print_y] == 1) {
                                 tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
-                                System.out.println(print_x + ", " + print_y + " = " + tiles_to_turn[print_x][print_y]);
                             }
                         }
                     }
+
+                    // und beende die EAST to WEST suche
+                    break;
                 }
             }
         }
 
-
+        System.out.println("placePiece() beendet");
+        setTile(x,y,current_player);
+        reverseAllMarkedTiles();
         return 0;
     }
 
@@ -177,11 +185,27 @@ public class GameBoardController implements Initializable {
         }
     }
 
+    /**
+     * Dreht alle Tiles im tiles_to_turn array um und setzt das array wieder auf 0
+     */
+    private void reverseAllMarkedTiles(){
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++){
+                if (tiles_to_turn[x][y] == 1) {
+                    reverseTile(x,y);
+                }
+            }
+        }
+    }
 
-
-
-    public void setTile(int x, int y, int type){
-        internal_board[x][y] = type;
+    /**
+     * Setzt einen spezifizierten Spieler auf das gewünschte Tile
+     * @param x
+     * @param y
+     * @param player Spieler der das angegebene Teil besetzen soll; 1 = white, 2 = black;
+     */
+    public void setTile(int x, int y, int player){
+        internal_board[x][y] = player;
         updateRender();
     }
 
