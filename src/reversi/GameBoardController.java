@@ -95,13 +95,15 @@ public class GameBoardController implements Initializable {
         }
 
         //Check if any moves are possible - If yes update tiles_to_turn accordingly, set the clicked tile, alternate current_player, and reverse all legally marked tiles
-        if (checkEastToWest(x,y) || checkWestToEast(x,y) || checkNorthToSouth(x,y) || checkSouthToNorth(x,y) || checkNorthwestToSoutheast(x,y)){
+        if (checkEastToWest(x,y) || checkWestToEast(x,y) || checkNorthToSouth(x,y) || checkSouthToNorth(x,y) || checkNorthWestToSouthEast(x,y) || checkSouthEastToNorthWest(x,y) || /* checkNorthEastToSouthWest(x,y) */){
             /* Check if move is valid and if valid add all affected tiles to the global tiles_to_turn array */
             checkEastToWest(x,y);
             checkWestToEast(x,y);
             checkNorthToSouth(x,y);
             checkSouthToNorth(x,y);
-            checkNorthwestToSoutheast(x,y);
+            checkNorthWestToSouthEast(x,y);
+            checkSouthEastToNorthWest(x,y);
+            //checkNorthEastToSouthWest(x,y);
 
             //nur setTile() FALLS der zug legal war
             setTile(x,y,current_player);
@@ -265,7 +267,7 @@ public class GameBoardController implements Initializable {
     }
 
     @SuppressWarnings("Duplicates")
-    private boolean checkNorthwestToSoutheast(int x, int y) {
+    private boolean checkNorthWestToSouthEast(int x, int y) {
         //  Check NORTHEAST to SOUTHWEST
 
         // falls am unteren rand ODER am rechten rand geklickt wurde, beende die methode (da rechts vom/ unter dem click kein tile ist sondern das programm fenster endet)
@@ -307,6 +309,35 @@ public class GameBoardController implements Initializable {
             }
         }
         return false; //falls ein tile links vom geklickten tile NICHT leer ist
+    }
+
+    @SuppressWarnings("Duplicates")
+    private boolean checkSouthEastToNorthWest(int x, int y) {
+        // FOR DETAILED COMMENTS see checkNortheastToSouthwest()
+        if (x == 0 || y == 0) return false;
+        if (x < width && y < height && internal_board[x-1][y-1] == opposing_player) {
+            int[][] temp_reverse = new int[width][height];
+            temp_reverse[x-1][y-1] = 1;
+            for (int x_pos= x - 2, y_pos = y - 2; x_pos >= 0 && y_pos >= 0; x_pos--, y_pos--){
+                if (internal_board[x_pos][y_pos] == opposing_player){
+                    temp_reverse[x_pos][y_pos] = 1;
+                }
+                else if (internal_board[x_pos][y_pos] == current_player) {
+                    for (int print_x = 0; print_x < width; print_x++) {
+                        for (int print_y = 0; print_y < height; print_y++) {
+                            if (temp_reverse[print_x][print_y] == 1) {
+                                tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                            }
+                        }
+                    }
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        return false;
     }
 
     private void determineSurrounding(int x, int y) {
