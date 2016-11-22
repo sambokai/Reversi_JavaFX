@@ -31,8 +31,8 @@ public class GameBoardController implements Initializable {
 
     int[][] surrounding = new int[3][3];
 
-    int current_player = 2;
-    int opposing_player = 1;
+    int current_player = 1;
+    int opposing_player = 2;
     public int difficulty;
 
 
@@ -53,7 +53,7 @@ public class GameBoardController implements Initializable {
 
         readUserDifficulty();
         resetBoard();
-
+        printCurrentPlayer();
         gamePane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouse) {
@@ -61,7 +61,12 @@ public class GameBoardController implements Initializable {
             }
         });
 
+
+
+
     }
+
+
 
     private void mouseSetTile(MouseEvent mouse) {
         int x = mouseXtoTileX(mouse.getX()), y = mouseYtoTileY(mouse.getY());
@@ -85,16 +90,34 @@ public class GameBoardController implements Initializable {
      */
     private int placePiece(int x , int y) {
         updateOpposingPlayer();
-        determineSurrounding(x,y);
 
         //Check if spot is full
         if (internal_board[x][y] != 0) {
             return -1;
         }
 
-        /* Check if move is valid and if valid add all affected tiles to the global tiles_to_turn array */
+        //Check if any moves are possible - If yes update tiles_to_turn accordingly, set the clicked tile, alternate current_player, and reverse all legally marked tiles
+        if (checkEastToWest(x,y) || checkWestToEast(x,y)){
+            /* Check if move is valid and if valid add all affected tiles to the global tiles_to_turn array */
+            checkEastToWest(x,y);
+            checkWestToEast(x,y);
 
+            //nur setTile() FALLS der zug legal war
+            setTile(x,y,current_player);
+            alternatePlayers();
+            reverseAllMarkedTiles();
+        }
+
+        return 0;
+    }
+
+
+    @SuppressWarnings("Duplicates")
+    private boolean checkEastToWest(int x, int y) {
         //  Check EAST TO WEST
+
+        // falls am linken rand geklickt wurde, beende die methode (da links vom click kein tile ist sondern das programm fenster endet)
+        if (x == 0) return false;
         // if 1 tile LEFT to the cliked tile is owned by opponent, THEN continue:
         if (x < width && internal_board[x-1][y] == opposing_player) {
 
@@ -105,9 +128,9 @@ public class GameBoardController implements Initializable {
             //go through all tiles from EAST to WEST beginning at 2 tiles left to the clicked tile, since 1 tile left was already checked
             for (int x_pos= x - 2; x_pos >= 0; x_pos--){
 
-               //wenn auf einen gegnerischen Stein gestoßen wird
-               // füge ihn dem temporären tracking array hinzu
-               if (internal_board[x_pos][y] == opposing_player){
+                //wenn auf einen gegnerischen Stein gestoßen wird
+                // füge ihn dem temporären tracking array hinzu
+                if (internal_board[x_pos][y] == opposing_player){
                     temp_reverse[x_pos][y] = 1;
                 }
 
@@ -124,18 +147,47 @@ public class GameBoardController implements Initializable {
                     }
 
                     // und beende die EAST to WEST suche
-                    break;
+                    return true;
+                }
+
+                else { //falls auf einen leeren tile gestoßen wird
+                    return false;
                 }
             }
         }
-
-        System.out.println("placePiece() beendet");
-        setTile(x,y,current_player);
-        reverseAllMarkedTiles();
-        return 0;
+        return false; //falls ein tile links vom geklickten tile NICHT leer ist
     }
 
+    @SuppressWarnings("Duplicates")
+    private boolean checkWestToEast(int x, int y) {
+        // FOR DETAILED COMMENTS SEE checkEastToWest()
 
+        // falls am rechten rand geklickt wurde, beende die methode (da rechts vom click kein tile ist sondern das programm fenster endet)
+        if (x == width-1) return false;
+        if (x < width && internal_board[x+1][y] == opposing_player) {
+            int[][] temp_reverse = new int[width][height];
+            temp_reverse[x+1][y] = 1;
+            for (int x_pos= x + 2; x_pos < width; x_pos++){
+                if (internal_board[x_pos][y] == opposing_player){
+                    temp_reverse[x_pos][y] = 1;
+                }
+                else if (internal_board[x_pos][y] == current_player) {
+                    for (int print_x = 0; print_x < width; print_x++) {
+                        for (int print_y = 0; print_y < height; print_y++) {
+                            if (temp_reverse[print_x][print_y] == 1) {
+                                tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                            }
+                        }
+                    }
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
 
     private void determineSurrounding(int x, int y) {
         try {
@@ -196,6 +248,7 @@ public class GameBoardController implements Initializable {
                 }
             }
         }
+        tiles_to_turn = new int[width][height];
     }
 
     /**
@@ -220,14 +273,6 @@ public class GameBoardController implements Initializable {
         updateRender();
     }
 
-    public void updateOpposingPlayer(){
-        if (current_player == 1) {
-            opposing_player = 2;
-        } else if (current_player == 2) {
-            opposing_player = 1;
-        }
-    }
-
     public void updateRender() {
         tileGroup.getChildren().clear(); //WICHTIG! um memoryleaks zu verhindern.
         for (int y = 0; y < height; y++) {
@@ -239,12 +284,43 @@ public class GameBoardController implements Initializable {
         }
     }
 
+    //TODO: überspringe den zug falls current_player keine zugmöglichkeit hat
+    //TODO: implementiere "spieler am zug" anzeige
+    private void alternatePlayers(){
+        if (current_player == 1){
+            current_player = 2;
+        }
+        else if (current_player == 2) {
+            current_player = 1;
+        }
+        updateOpposingPlayer();
+
+        printCurrentPlayer();
+    }
+
+    private void printCurrentPlayer(){
+        //DEBUG
+        if (current_player == 1) System.out.println("It's WHITE's turn!");
+        else if (current_player == 2) System.out.println("It's BLACK's turn!");
+    }
+
+    public void updateOpposingPlayer(){
+        if (current_player == 1) {
+            opposing_player = 2;
+        } else if (current_player == 2) {
+            opposing_player = 1;
+        }
+    }
+
     private void resetBoard() {
         internal_board = new int[width][height];
         internal_board[(int) (width/2-0.5)][(int) (height/2-0.5)] = 1;
         internal_board[(int) (width/2+0.5)][(int) (height/2-0.5)] = 2;
         internal_board[(int) (width/2-0.5)][(int) (height/2+0.5)] = 2;
         internal_board[(int) (width/2+0.5)][(int) (height/2+0.5)] = 1;
+
+        /* Debug */
+        internal_board[(int) (width/2+1.5)][(int) (height/2-0.5)] = 2;
         updateRender();
     }
 
