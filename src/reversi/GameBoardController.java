@@ -271,17 +271,14 @@ public class GameBoardController implements Initializable {
         // falls am unteren rand ODER am rechten rand geklickt wurde, beende die methode (da rechts vom/ unter dem click kein tile ist sondern das programm fenster endet)
         if (x == width-1 || y == height-1) return false; //possible bug concerning -1
 
-        // if 1 tile LEFT to the cliked tile is owned by opponent, THEN continue:
+        // if the tile that is 1 below and 1 to the right of the clicked tile is owned by opponent, THEN continue:
         if (x < width && y < height && internal_board[x+1][y+1] == opposing_player) {
-
             //array for tracking potential reverse-candidates
             int[][] temp_reverse = new int[width][height];
-            //temporarily track the, already checked, 1 tile LEFT to clicked tile
+            //temporarily track the, already checked, tile 1 below and 1 to the right to clicked tile
             temp_reverse[x+1][y+1] = 1;
-            //go through all tiles from EAST to WEST beginning at 2 tiles left to the clicked tile, since 1 tile left was already checked
+            //go through all tiles from NORTHEAST to SOUTHEAST beginning at 2 tiles below/right of the clicked tile, since 1 tile left was already checked
             for (int x_pos= x + 2, y_pos = y +2; x_pos < width && y_pos < height; x_pos++, y_pos++){
-
-                //for (int y_pos = y + 2; y_pos < height; y_pos++) {
                     //wenn auf einen gegnerischen Stein gestoßen wird
                     // füge ihn dem temporären tracking array hinzu
                     if (internal_board[x_pos][y_pos] == opposing_player){
@@ -307,7 +304,6 @@ public class GameBoardController implements Initializable {
                     else { //falls auf einen leeren tile gestoßen wird
                         return false;
                     }
-                //}
             }
         }
         return false; //falls ein tile links vom geklickten tile NICHT leer ist
@@ -458,7 +454,7 @@ public class GameBoardController implements Initializable {
 
         updateRender();
     }
-    
+
     public int readUserDifficulty(){
         RadioButton selectedDifficulty = (RadioButton) difficultyToggleGroup.getSelectedToggle();
         switch(selectedDifficulty.getText()) {

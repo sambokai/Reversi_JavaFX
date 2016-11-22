@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/GameBoardController.java" afterPath="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -71,8 +69,8 @@
       <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="460" column="4" selection-start-line="460" selection-start-column="4" selection-end-line="460" selection-end-column="4" />
+            <state relative-caret-position="194">
+              <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
               <folding>
                 <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -92,7 +90,6 @@
                 <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
                 <element signature="e#9924#9956#0" expanded="false" />
-                <element signature="e#10884#10936#0" expanded="false" />
                 <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -871,12 +868,12 @@
       <workItem from="1479721319880" duration="8883000" />
       <workItem from="1479751874615" duration="1209000" />
       <workItem from="1479813385118" duration="6573000" />
-      <workItem from="1479841767286" duration="5649000" />
+      <workItem from="1479841767286" duration="5980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69177000" />
+    <option name="totallyTimeSpent" value="69508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1009,7 +1006,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1072,7 +1068,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1135,7 +1130,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1175,7 +1169,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1227,7 +1220,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1279,7 +1271,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1319,7 +1310,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1517,8 +1507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="460" column="4" selection-start-line="460" selection-start-column="4" selection-end-line="460" selection-end-column="4" />
+        <state relative-caret-position="194">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1538,7 +1528,6 @@
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthwestToSoutheast#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9924#9956#0" expanded="false" />
-            <element signature="e#10884#10936#0" expanded="false" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
