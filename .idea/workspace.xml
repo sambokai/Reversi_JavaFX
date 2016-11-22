@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/GameBoardController.java" afterPath="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -71,8 +70,8 @@
       <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+            <state relative-caret-position="248">
+              <caret line="374" column="61" selection-start-line="374" selection-start-column="61" selection-end-line="374" selection-end-column="61" />
               <folding>
                 <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -80,18 +79,21 @@
                 <element signature="class#1463:1625" expanded="false" />
                 <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#3196#3227#0" expanded="true" />
                 <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#4089#4138#0" expanded="false" />
+                <element signature="e#3378#3400#0" expanded="false" />
+                <element signature="e#4179#4228#0" expanded="false" />
                 <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+                <element signature="e#5494#5540#0" expanded="false" />
                 <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#6733#6757#0" expanded="false" />
-                <element signature="e#7570#7619#0" expanded="false" />
+                <element signature="e#6823#6847#0" expanded="false" />
+                <element signature="e#7645#7694#0" expanded="false" />
                 <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#9978#10009#0" expanded="true" />
                 <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#12416#12447#0" expanded="true" />
-                <element signature="e#13693#13724#0" expanded="true" />
+                <element signature="e#10155#10187#0" expanded="false" />
+                <element signature="e#11187#11236#0" expanded="false" />
+                <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+                <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+                <element signature="e#15054#15085#0" expanded="true" />
                 <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -870,12 +872,12 @@
       <workItem from="1479721319880" duration="8883000" />
       <workItem from="1479751874615" duration="1209000" />
       <workItem from="1479813385118" duration="6573000" />
-      <workItem from="1479841767286" duration="6904000" />
+      <workItem from="1479841767286" duration="7562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70432000" />
+    <option name="totallyTimeSpent" value="71090000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -954,7 +956,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -996,18 +998,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1058,18 +1063,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1120,18 +1128,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1159,18 +1170,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1210,18 +1224,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1261,18 +1278,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1300,18 +1320,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
@@ -1509,8 +1532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+        <state relative-caret-position="248">
+          <caret line="374" column="61" selection-start-line="374" selection-start-column="61" selection-end-line="374" selection-end-column="61" />
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1518,18 +1541,21 @@
             <element signature="class#1463:1625" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3196#3227#0" expanded="true" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#4089#4138#0" expanded="false" />
+            <element signature="e#3378#3400#0" expanded="false" />
+            <element signature="e#4179#4228#0" expanded="false" />
             <element signature="method#checkWestToEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#5494#5540#0" expanded="false" />
             <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6733#6757#0" expanded="false" />
-            <element signature="e#7570#7619#0" expanded="false" />
+            <element signature="e#6823#6847#0" expanded="false" />
+            <element signature="e#7645#7694#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#9978#10009#0" expanded="true" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#12416#12447#0" expanded="true" />
-            <element signature="e#13693#13724#0" expanded="true" />
+            <element signature="e#10155#10187#0" expanded="false" />
+            <element signature="e#11187#11236#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#15054#15085#0" expanded="true" />
             <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />

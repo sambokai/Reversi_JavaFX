@@ -95,7 +95,8 @@ public class GameBoardController implements Initializable {
         }
 
         //Check if any moves are possible - If yes update tiles_to_turn accordingly, set the clicked tile, alternate current_player, and reverse all legally marked tiles
-        if (checkEastToWest(x,y) || checkWestToEast(x,y) || checkNorthToSouth(x,y) || checkSouthToNorth(x,y) || checkNorthWestToSouthEast(x,y) || checkSouthEastToNorthWest(x,y) || checkNorthEastToSouthWest(x,y)){
+        if (checkEastToWest(x,y) || checkWestToEast(x,y) || checkNorthToSouth(x,y) || checkSouthToNorth(x,y)
+            || checkNorthWestToSouthEast(x,y) || checkSouthEastToNorthWest(x,y) || checkNorthEastToSouthWest(x,y) || checkSouthWestToNorthEast(x,y)){
             /* Check if move is valid and if valid add all affected tiles to the global tiles_to_turn array */
             checkEastToWest(x,y);
             checkWestToEast(x,y);
@@ -104,6 +105,7 @@ public class GameBoardController implements Initializable {
             checkNorthWestToSouthEast(x,y);
             checkSouthEastToNorthWest(x,y);
             checkNorthEastToSouthWest(x,y);
+            checkSouthWestToNorthEast(x,y);
 
             //nur setTile() FALLS der zug legal war
             setTile(x,y,current_player);
@@ -195,7 +197,7 @@ public class GameBoardController implements Initializable {
         //  Check NORTH to SOUTH
 
         // falls am unteren rand geklickt wurde, beende die methode (da unterhalb vom click kein tile ist sondern das programmfenster endet)
-        if (y == height - 1) return false; //possible bug
+        if (y == height - 1) return false;
 
         // if 1 tile BELOW the cliked tile is owned by opponent, THEN continue:
         if (y < height && internal_board[x][y+1] == opposing_player) {
@@ -343,11 +345,40 @@ public class GameBoardController implements Initializable {
     @SuppressWarnings("Duplicates")
     private boolean checkNorthEastToSouthWest(int x, int y) {
         // FOR DETAILED COMMENTS see checkNortheastToSouthwest()
-        if (x == 0 || y == height) return false;
+        if (x == width-1 || y == 0) return false;
         if (x < width && y < height && internal_board[x+1][y-1] == opposing_player) {
             int[][] temp_reverse = new int[width][height];
             temp_reverse[x+1][y-1] = 1;
             for (int x_pos= x + 2, y_pos = y - 2; x_pos < width && y_pos >= 0; x_pos++, y_pos--){
+                if (internal_board[x_pos][y_pos] == opposing_player){
+                    temp_reverse[x_pos][y_pos] = 1;
+                }
+                else if (internal_board[x_pos][y_pos] == current_player) {
+                    for (int print_x = 0; print_x < width; print_x++) {
+                        for (int print_y = 0; print_y < height; print_y++) {
+                            if (temp_reverse[print_x][print_y] == 1) {
+                                tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                            }
+                        }
+                    }
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+
+    @SuppressWarnings("Duplicates")
+    private boolean checkSouthWestToNorthEast(int x, int y) {
+        // FOR DETAILED COMMENTS see checkNortheastToSouthwest()
+        if (x == 0 || y == height-1) return false;
+        if (x < width && y < height && internal_board[x-1][y+1] == opposing_player) {
+            int[][] temp_reverse = new int[width][height];
+            temp_reverse[x-1][y+1] = 1;
+            for (int x_pos= x - 2, y_pos = y + 2; x_pos >= 0 && y_pos < height; x_pos--, y_pos++){
                 if (internal_board[x_pos][y_pos] == opposing_player){
                     temp_reverse[x_pos][y_pos] = 1;
                 }
