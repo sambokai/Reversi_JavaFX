@@ -66,8 +66,6 @@ public class GameBoardController implements Initializable {
 
     }
 
-
-
     private void mouseSetTile(MouseEvent mouse) {
         int x = mouseXtoTileX(mouse.getX()), y = mouseYtoTileY(mouse.getY());
         placePiece(x,y);
@@ -97,12 +95,13 @@ public class GameBoardController implements Initializable {
         }
 
         //Check if any moves are possible - If yes update tiles_to_turn accordingly, set the clicked tile, alternate current_player, and reverse all legally marked tiles
-        if (checkEastToWest(x,y) || checkWestToEast(x,y) || checkNorthToSouth(x,y) || checkSouthToNorth(x,y)){
+        if (checkEastToWest(x,y) || checkWestToEast(x,y) || checkNorthToSouth(x,y) || checkSouthToNorth(x,y) || checkNorthwestToSoutheast(x,y)){
             /* Check if move is valid and if valid add all affected tiles to the global tiles_to_turn array */
             checkEastToWest(x,y);
             checkWestToEast(x,y);
             checkNorthToSouth(x,y);
             checkSouthToNorth(x,y);
+            checkNorthwestToSoutheast(x,y);
 
             //nur setTile() FALLS der zug legal war
             setTile(x,y,current_player);
@@ -112,7 +111,6 @@ public class GameBoardController implements Initializable {
 
         return 0;
     }
-
 
     @SuppressWarnings("Duplicates")
     private boolean checkEastToWest(int x, int y) {
@@ -195,7 +193,7 @@ public class GameBoardController implements Initializable {
         //  Check NORTH to SOUTH
 
         // falls am unteren rand geklickt wurde, beende die methode (da unterhalb vom click kein tile ist sondern das programmfenster endet)
-        if (y == height) return false;
+        if (y == height - 1) return false; //possible bug
 
         // if 1 tile BELOW the cliked tile is owned by opponent, THEN continue:
         if (y < height && internal_board[x][y+1] == opposing_player) {
@@ -266,6 +264,54 @@ public class GameBoardController implements Initializable {
         return false;
     }
 
+    @SuppressWarnings("Duplicates")
+    private boolean checkNorthwestToSoutheast(int x, int y) {
+        //  Check NORTHEAST to SOUTHWEST
+
+        // falls am unteren rand ODER am rechten rand geklickt wurde, beende die methode (da rechts vom/ unter dem click kein tile ist sondern das programm fenster endet)
+        if (x == width-1 || y == height-1) return false; //possible bug concerning -1
+
+        // if 1 tile LEFT to the cliked tile is owned by opponent, THEN continue:
+        if (x < width && y < height && internal_board[x+1][y+1] == opposing_player) {
+
+            //array for tracking potential reverse-candidates
+            int[][] temp_reverse = new int[width][height];
+            //temporarily track the, already checked, 1 tile LEFT to clicked tile
+            temp_reverse[x+1][y+1] = 1;
+            //go through all tiles from EAST to WEST beginning at 2 tiles left to the clicked tile, since 1 tile left was already checked
+            for (int x_pos= x + 2, y_pos = y +2; x_pos < width && y_pos < height; x_pos++, y_pos++){
+
+                //for (int y_pos = y + 2; y_pos < height; y_pos++) {
+                    //wenn auf einen gegnerischen Stein gestoßen wird
+                    // füge ihn dem temporären tracking array hinzu
+                    if (internal_board[x_pos][y_pos] == opposing_player){
+                        temp_reverse[x_pos][y_pos] = 1;
+                    }
+
+                    //wenn auf einen eigenen stein gestoßen wird ...
+                    else if (internal_board[x_pos][y_pos] == current_player) {
+
+                        // ... füge die temporär getrackten steine dem finalen tiles_to_turn hinzu ...
+                        for (int print_x = 0; print_x < width; print_x++) {
+                            for (int print_y = 0; print_y < height; print_y++) {
+                                if (temp_reverse[print_x][print_y] == 1) {
+                                    tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                                }
+                            }
+                        }
+
+                        // und beende diese suche
+                        return true;
+                    }
+
+                    else { //falls auf einen leeren tile gestoßen wird
+                        return false;
+                    }
+                //}
+            }
+        }
+        return false; //falls ein tile links vom geklickten tile NICHT leer ist
+    }
 
     private void determineSurrounding(int x, int y) {
         try {
@@ -400,6 +446,9 @@ public class GameBoardController implements Initializable {
         /* Debug */
         internal_board[(int) (width/2+1.5)][(int) (height/2-0.5)] = 2;
 
+        internal_board[(int) (width/2-1.5)][(int) (height/2-1.5)] = 2;
+        internal_board[(int) (width/2-2.5)][(int) (height/2-2.5)] = 2;
+
         //test if multiple rows are checked and reversed
         if (false) {
             internal_board[(int) (width/2+2.5)][(int) (height/2+0.5)] = 2;
@@ -409,9 +458,7 @@ public class GameBoardController implements Initializable {
 
         updateRender();
     }
-
-
-
+    
     public int readUserDifficulty(){
         RadioButton selectedDifficulty = (RadioButton) difficultyToggleGroup.getSelectedToggle();
         switch(selectedDifficulty.getText()) {
