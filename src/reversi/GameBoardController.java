@@ -31,8 +31,8 @@ public class GameBoardController implements Initializable {
 
     int[][] surrounding = new int[3][3];
 
-    int current_player = 1;
-    int opposing_player = 2;
+    int current_player = 2;
+    int opposing_player = 1;
     public int difficulty;
 
 
@@ -43,12 +43,13 @@ public class GameBoardController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        internal_board = new int[width][height];
-        gamePane.getChildren().setAll(tileGroup);
-
         width = 8;
         height = 8;
         tile_size = 600 / width;
+
+        internal_board = new int[width][height];
+        tiles_to_turn = new int[width][height];
+        gamePane.getChildren().setAll(tileGroup);
 
         readUserDifficulty();
         resetBoard();
@@ -65,6 +66,7 @@ public class GameBoardController implements Initializable {
     private void mouseSetTile(MouseEvent mouse) {
         int x = mouseXtoTileX(mouse.getX()), y = mouseYtoTileY(mouse.getY());
         placePiece(x,y);
+
     }
 
     private int mouseXtoTileX(double x) {
@@ -75,16 +77,57 @@ public class GameBoardController implements Initializable {
         return (int) (y / tile_size);
     }
 
-    private void placePiece(int x , int y) {
+    /**
+     *
+     * @param x
+     * @param y
+     * @return
+     */
+    private int placePiece(int x , int y) {
         updateOpposingPlayer();
         determineSurrounding(x,y);
+
+        //Check if spot is full
+        if (internal_board[x][y] != 0) {
+            return -1;
+        }
+
+        /* Check if move is valid */
+
+        //  Check EAST TO WEST
+        if (x < width && internal_board[x-1][y] == opposing_player) {
+            int[][] temp_reverse = new int[width][height];
+            temp_reverse[x-1][y] = 1;
+
+
+
+            for (int x_pos= x - 2; x_pos >= 0; x_pos--){
+
+               if (internal_board[x_pos][y] == opposing_player){ // wenn auf einen gegnerischen stein gestoßen wird
+                    temp_reverse[x_pos][y] = 1;
+                   System.out.println("check: " + x_pos + ", " + y);
+                }
+
+                else if (internal_board[x_pos][y] == current_player) { //wenn auf eigenen stein gestoßen dann :
+
+
+                    for (int print_x = 0; print_x < width; print_x++) {
+                        for (int print_y = 0; print_y < height; print_y++) {
+                            if (temp_reverse[print_x][print_y] == 1) {
+                                tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                                System.out.println(print_x + ", " + print_y + " = " + tiles_to_turn[print_x][print_y]);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        return 0;
     }
 
 
-
-    private boolean updateTurnables(int x, int y){
-
-    }
 
     private void determineSurrounding(int x, int y) {
         try {
@@ -134,15 +177,7 @@ public class GameBoardController implements Initializable {
         }
     }
 
-    /**
-     * Überprüft ob der Zug gespielt werden darf
-     * @param x
-     * @param y
-     * @return
-     */
-    public boolean isLegalMove(int x, int y) {
-        return true;
-    }
+
 
 
     public void setTile(int x, int y, int type){
