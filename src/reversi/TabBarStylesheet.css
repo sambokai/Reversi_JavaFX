@@ -27,11 +27,11 @@
 
 .gridDialogTitle{
     -fx-font-size: 130%;
-
+    -fx-font-smoothing-type: lcd;
 }
 
 .gridDialogBody{
-
+    -fx-font-weight: BOLD;
 }
 
 /*TODO: Style the gridsize dialog. big title, centered text maybe*/

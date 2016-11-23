@@ -1,5 +1,6 @@
 package reversi;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXTabPane;
 import io.datafx.controller.context.FXMLViewContext;
@@ -35,6 +36,9 @@ public class GameBoardController implements Initializable {
     @FXML private JFXDialog gridChangeDialog;
     @FXML private Pane settingsPane;
     @FXML private StackPane root;
+    @FXML private JFXButton acceptButton;
+    @FXML private JFXButton cancelButton;
+    @FXML private JFXTabPane tabPane;
 
     private Group tileGroup = new Group();
 
@@ -72,18 +76,27 @@ public class GameBoardController implements Initializable {
                 mouseSetTile(mouse);
             }
         });
+
         gridsizeToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-
-
-                //TODO: implement: only proceed if player clicks on accept, then close dialog
-                //TODO: implement: close dialog if player clicks on cancel (closeDialog()-method)
                 gridChangeDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
                 gridChangeDialog.show(root);
-                updateUserGridsize();
+                gridChangeDialog.setOverlayClose(false);
+                cancelButton.setOnMouseClicked((e)->{
+                    oldValue.setSelected(true);
+                    gridChangeDialog.close();
+                });
+
+                acceptButton.setOnMouseClicked((e)->{
+                    updateUserGridsize();
+                    gridChangeDialog.close();
+                    tabPane.getSelectionModel().select(0);
+                });
             }
         });
+
+
 
 
 

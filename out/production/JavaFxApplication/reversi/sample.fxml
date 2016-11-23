@@ -127,18 +127,18 @@
         </Tab>
     </tabs>
 </JFXTabPane>
-    <JFXDialog fx:id="gridChangeDialog" styleClass="gridchangedialog" >
+    <JFXDialog fx:id="gridChangeDialog" styleClass="gridchangedialog">
         <JFXDialogLayout>
             <heading>
                 <Label styleClass="gridDialogTitle">New Game?</Label>
             </heading>
             <body>
-                <Label styleClass="gridDialogBody">Changing the Gridsize abandons your current Game. Do you want to proceed?</Label>
+                <Label styleClass="gridDialogBody">Changing the Gridsize CANCELS your current Game. Do you want to proceed?</Label>
             </body>
             <actions>
-                <JFXButton fx:id="cancelButton" styleClass="dialog-cancel">CANCEL
+                <JFXButton fx:id="cancelButton" styleClass="dialog-cancel">Cancel
                 </JFXButton>
-                <JFXButton fx:id="acceptButton" styleClass="dialog-accept">ACCEPT
+                <JFXButton fx:id="acceptButton" styleClass="dialog-accept">NEW GAME
                 </JFXButton>
             </actions>
         </JFXDialogLayout>
