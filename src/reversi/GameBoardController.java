@@ -16,44 +16,48 @@ import java.util.ResourceBundle;
 
 public class GameBoardController implements Initializable {
 
-    @FXML public Tab gameTab;
-    @FXML public JFXTabPane tabPane;
-    @FXML public ToggleGroup difficultyToggleGroup;
-    @FXML public Pane gamePane;
+    @FXML private Tab gameTab;
+    @FXML private JFXTabPane tabPane;
+    @FXML private ToggleGroup difficultyToggleGroup;
+    @FXML private Pane gamePane;
 
     private Group tileGroup = new Group();
 
     /** 0 = empty, 1 = white, 2 = black */
-    int[][] internal_board;
+    static int[][] internal_board;
 
     /** 1= turn; 0 = leave as is */
-    int[][] tiles_to_turn;
+    static private int[][] tiles_to_turn;
 
-    int[][] surrounding = new int[3][3];
+    private int[][] surrounding = new int[3][3];
 
     int current_player = 1;
     int opposing_player = 2;
-    public int difficulty;
+    int difficulty;
+    int white_tiles;
+    int black_tiles;
 
 
-    public static double tile_size;
-    public static int width;
-    public static int height;
+    static double tile_size;
+    static int width;
+    static int height;
 
+    private static void updateUserGridsize(){
+        width = 8;
+        height = 8;
+        tile_size = (double) 600 / (double) width;
+        internal_board = new int[width][height];
+        tiles_to_turn = new int[width][height];
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        width = 8;
-        height = 8;
-        tile_size = 600 / width;
-
-        internal_board = new int[width][height];
-        tiles_to_turn = new int[width][height];
         gamePane.getChildren().setAll(tileGroup);
-
-        readUserDifficulty();
-        resetBoard();
+        updateUserGridsize();
+        updateUserDifficulty();
+        resetBoard(false);
         printCurrentPlayer();
+        updateScore();
         gamePane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouse) {
@@ -111,6 +115,7 @@ public class GameBoardController implements Initializable {
             setTile(x,y,current_player);
             alternatePlayers();
             reverseAllMarkedTiles();
+            updateScore();
         }
 
         return 0;
@@ -495,8 +500,29 @@ public class GameBoardController implements Initializable {
         }
     }
 
+
+    /**
+     * Aktualisiert den Punktestand indem es alle Steine zählt und die jeweiligen Spielerscores erneuert
+     */
+    private void updateScore(){
+        //TODO: implementiere GUI-punkteanzeige
+        white_tiles = 0;
+        black_tiles = 0;
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                if (internal_board[x][y] == 1) {
+                    white_tiles++;
+                } else if (internal_board[x][y] == 2){
+                    black_tiles++;
+                }
+            }
+        }
+        System.out.println("WHITE: " + white_tiles);
+        System.out.println("BLACK: " + black_tiles);
+    }
+
+
     //TODO: überspringe den zug falls current_player keine zugmöglichkeit hat
-    //TODO: implementiere "spieler am zug" anzeige
     private void alternatePlayers(){
         if (current_player == 1){
             current_player = 2;
@@ -507,8 +533,10 @@ public class GameBoardController implements Initializable {
         updateOpposingPlayer();
 
         printCurrentPlayer();
+
     }
 
+    //TODO: implementiere "spieler am zug" GUI-anzeige
     private void printCurrentPlayer(){
         //DEBUG
         if (current_player == 1) System.out.println("It's WHITE's turn!");
@@ -523,38 +551,42 @@ public class GameBoardController implements Initializable {
         }
     }
 
-    private void resetBoard() {
+    /**
+     *
+     * @param debug Legt fest ob Debugcode ausgeführt werden soll oder nicht
+     */
+    private void resetBoard(boolean debug) {
         internal_board = new int[width][height];
-        internal_board[(int) (width/2-0.5)][(int) (height/2-0.5)] = 1;
-        internal_board[(int) (width/2+0.5)][(int) (height/2-0.5)] = 2;
-        internal_board[(int) (width/2-0.5)][(int) (height/2+0.5)] = 2;
-        internal_board[(int) (width/2+0.5)][(int) (height/2+0.5)] = 1;
+        internal_board[(int) (width/(float)2-0.5)][(int) (height/(float)2-0.5)] = 1;
+        internal_board[(int) (width/(float)2+0.5)][(int) (height/(float)2-0.5)] = 2;
+        internal_board[(int) (width/(float)2-0.5)][(int) (height/(float)2+0.5)] = 2;
+        internal_board[(int) (width/(float)2+0.5)][(int) (height/(float)2+0.5)] = 1;
 
         /* Debug */
-        internal_board[(int) (width/2+1.5)][(int) (height/2-0.5)] = 2;
+        if (debug) {
+            internal_board[(int) (width/(float)2+1.5)][(int) (height/(float)2-0.5)] = 2;
+            internal_board[(int) (width/(float)2-1.5)][(int) (height/(float)2-1.5)] = 2;
+            internal_board[(int) (width/(float)2-2.5)][(int) (height/(float)2-2.5)] = 2;
 
-        internal_board[(int) (width/2-1.5)][(int) (height/2-1.5)] = 2;
-        internal_board[(int) (width/2-2.5)][(int) (height/2-2.5)] = 2;
-
-        //test if multiple rows are checked and reversed
-        if (false) {
-            internal_board[(int) (width/2+2.5)][(int) (height/2+0.5)] = 2;
-            internal_board[(int) (width/2+2.5)][(int) (height/2+1.5)] = 2;
-            internal_board[(int) (width/2+2.5)][(int) (height/2+2.5)] = 1;
         }
 
         updateRender();
     }
 
-    public int readUserDifficulty(){
+    private int updateUserDifficulty(){
         RadioButton selectedDifficulty = (RadioButton) difficultyToggleGroup.getSelectedToggle();
         switch(selectedDifficulty.getText()) {
             case "Easy":
                 difficulty = 1;
+                break;
             case "Medium":
                 difficulty = 2;
+                break;
             case "Hard":
                 difficulty = 3;
+                break;
+            default:
+                break;
         }
         return difficulty;
     }

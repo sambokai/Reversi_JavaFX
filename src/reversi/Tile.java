@@ -13,7 +13,6 @@ import javafx.scene.shape.*;
  */
 public class Tile extends ImageView {
 
-    private ReversiPiece piece;
     private Image emptyTile_img = new Image(getClass().getResource("res/empty2.png").toExternalForm());
     private Image blackTile_img = new Image(getClass().getResource("res/black2.png").toExternalForm());
     private Image whiteTile_img = new Image(getClass().getResource("res/white2.png").toExternalForm());
@@ -39,6 +38,8 @@ public class Tile extends ImageView {
             case 2:
                 setImage(blackTile_img);
                 this.tile_type = tile_type;
+                break;
+            default:
                 break;
         }
 
