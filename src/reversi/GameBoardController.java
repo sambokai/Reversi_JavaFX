@@ -1,6 +1,10 @@
 package reversi;
 
+import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXTabPane;
+import io.datafx.controller.context.FXMLViewContext;
+import io.datafx.controller.flow.context.FXMLViewFlowContext;
+import io.datafx.controller.flow.context.ViewFlowContext;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -12,19 +16,25 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Stack;
 
 public class GameBoardController implements Initializable {
 
+    @FXMLViewFlowContext
+    private ViewFlowContext context;
 
     @FXML private ToggleGroup difficultyToggleGroup;
     @FXML private ToggleGroup gridsizeToggleGroup;
     @FXML private Pane gamePane;
-
+    @FXML private JFXDialog gridChangeDialog;
+    @FXML private Pane settingsPane;
+    @FXML private StackPane root;
 
     private Group tileGroup = new Group();
 
@@ -65,6 +75,12 @@ public class GameBoardController implements Initializable {
         gridsizeToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+
+
+                //TODO: implement: only proceed if player clicks on accept, then close dialog
+                //TODO: implement: close dialog if player clicks on cancel (closeDialog()-method)
+                gridChangeDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
+                gridChangeDialog.show(root);
                 updateUserGridsize();
             }
         });
@@ -610,6 +626,8 @@ public class GameBoardController implements Initializable {
             case "10x10":
                 width = 10;
                 height = 10;
+                break;
+            default:
                 break;
         }
         System.out.println("Changed Gridsize to " + width + "x" + height);

@@ -16,10 +16,22 @@
     -fx-background-color: #E8F5E9;
 }
 
-
-
-
-
 .jfx-radio-button  {
     -fx-selected-color: #388E3C;
 }
+
+
+.gridchangedialog {
+    -fx-background-color: rgba(0, 0, 0, 0.65);
+}
+
+.gridDialogTitle{
+    -fx-font-size: 130%;
+
+}
+
+.gridDialogBody{
+
+}
+
+/*TODO: Style the gridsize dialog. big title, centered text maybe*/
