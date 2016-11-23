@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/ReversiPiece.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reversi/ReversiPiece.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/Tile.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/Tile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/sambokai.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/sambokai.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/sample.fxml" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/sample.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/GameBoardController.java" afterPath="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/Tile.java" afterPath="$PROJECT_DIR$/src/reversi/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/sample.fxml" afterPath="$PROJECT_DIR$/src/reversi/sample.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,23 +83,22 @@
       <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="517" column="13" selection-start-line="517" selection-start-column="13" selection-end-line="517" selection-end-column="13" />
+            <state relative-caret-position="319">
+              <caret line="602" column="26" selection-start-line="602" selection-start-column="26" selection-end-line="602" selection-end-column="26" />
               <folding>
                 <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#3581#3603#0" expanded="false" />
-                <element signature="e#4382#4431#0" expanded="false" />
-                <element signature="e#5697#5743#0" expanded="false" />
-                <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#7026#7050#0" expanded="false" />
-                <element signature="e#7848#7897#0" expanded="false" />
+                <element signature="e#3776#3798#0" expanded="false" />
+                <element signature="e#4577#4626#0" expanded="false" />
+                <element signature="e#5892#5938#0" expanded="false" />
+                <element signature="e#7221#7245#0" expanded="false" />
+                <element signature="e#8043#8092#0" expanded="false" />
                 <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#10358#10390#0" expanded="false" />
-                <element signature="e#11390#11439#0" expanded="false" />
+                <element signature="e#10553#10585#0" expanded="false" />
+                <element signature="e#11585#11634#0" expanded="false" />
                 <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -171,9 +168,12 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="300">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding>
+                <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+                <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -222,9 +222,9 @@
         <option value="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" />
         <option value="$PROJECT_DIR$/src/reversi/PieceType.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/reversi/sample.fxml" />
         <option value="$PROJECT_DIR$/src/reversi/Main.java" />
         <option value="$PROJECT_DIR$/src/reversi/Tile.java" />
+        <option value="$PROJECT_DIR$/src/reversi/sample.fxml" />
         <option value="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
       </list>
     </option>
@@ -881,12 +881,12 @@
       <workItem from="1479857173492" duration="642000" />
       <workItem from="1479859998729" duration="492000" />
       <workItem from="1479863770531" duration="531000" />
-      <workItem from="1479903872977" duration="70000" />
+      <workItem from="1479903872977" duration="2762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75055000" />
+    <option name="totallyTimeSpent" value="77747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -991,7 +991,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,16 +1007,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1046,7 +1048,10 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,16 +1064,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1101,7 +1105,10 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1114,16 +1121,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1149,16 +1155,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1182,7 +1187,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1196,16 +1204,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1229,7 +1236,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1243,16 +1253,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1278,16 +1287,15 @@
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
             <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
             <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
@@ -1311,7 +1319,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1412,41 +1423,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/ReversiPiece.java" />
-    <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="517" column="13" selection-start-line="517" selection-start-column="13" selection-end-line="517" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#3581#3603#0" expanded="false" />
-            <element signature="e#4382#4431#0" expanded="false" />
-            <element signature="e#5697#5743#0" expanded="false" />
-            <element signature="method#checkNorthToSouth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#7026#7050#0" expanded="false" />
-            <element signature="e#7848#7897#0" expanded="false" />
-            <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10358#10390#0" expanded="false" />
-            <element signature="e#11390#11439#0" expanded="false" />
-            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#reverseTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#updateRender#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#printCurrentPlayer#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1496,9 +1472,46 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="602" column="26" selection-start-line="602" selection-start-column="26" selection-end-line="602" selection-end-column="26" />
+          <folding>
+            <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
+            <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#mouseSetTile#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkEastToWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#3776#3798#0" expanded="false" />
+            <element signature="e#4577#4626#0" expanded="false" />
+            <element signature="e#5892#5938#0" expanded="false" />
+            <element signature="e#7221#7245#0" expanded="false" />
+            <element signature="e#8043#8092#0" expanded="false" />
+            <element signature="method#checkSouthToNorth#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthWestToSouthEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#10553#10585#0" expanded="false" />
+            <element signature="e#11585#11634#0" expanded="false" />
+            <element signature="method#checkSouthEastToNorthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkNorthEastToSouthWest#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#checkSouthWestToNorthEast#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#determineSurrounding#0;class#GameBoardController#0" expanded="false" />
+            <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
+            <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#setTile#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#reverseTile#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#updateRender#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#printCurrentPlayer#0;class#GameBoardController#0" expanded="false" />
+            <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

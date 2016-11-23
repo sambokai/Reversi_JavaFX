@@ -1,25 +1,30 @@
 package reversi;
 
 import com.jfoenix.controls.JFXTabPane;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class GameBoardController implements Initializable {
 
-    @FXML private Tab gameTab;
-    @FXML private JFXTabPane tabPane;
+
     @FXML private ToggleGroup difficultyToggleGroup;
+    @FXML private ToggleGroup gridsizeToggleGroup;
     @FXML private Pane gamePane;
+
 
     private Group tileGroup = new Group();
 
@@ -42,13 +47,6 @@ public class GameBoardController implements Initializable {
     static int width;
     static int height;
 
-    private static void updateUserGridsize(){
-        width = 8;
-        height = 8;
-        tile_size = (double) 600 / (double) width;
-        internal_board = new int[width][height];
-        tiles_to_turn = new int[width][height];
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -62,6 +60,12 @@ public class GameBoardController implements Initializable {
             @Override
             public void handle(MouseEvent mouse) {
                 mouseSetTile(mouse);
+            }
+        });
+        gridsizeToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+                updateUserGridsize();
             }
         });
 
@@ -569,7 +573,8 @@ public class GameBoardController implements Initializable {
             internal_board[(int) (width/(float)2-2.5)][(int) (height/(float)2-2.5)] = 2;
 
         }
-
+        current_player = 1;
+        opposing_player = 2;
         updateRender();
     }
 
@@ -590,4 +595,30 @@ public class GameBoardController implements Initializable {
         }
         return difficulty;
     }
+
+    private void updateUserGridsize(){
+        RadioButton selectedGridsize = (RadioButton) gridsizeToggleGroup.getSelectedToggle();
+        switch (selectedGridsize.getText()){
+            case "6x6":
+                width = 6;
+                height = 6;
+                break;
+            case "8x8":
+                width = 8;
+                height = 8;
+                break;
+            case "10x10":
+                width = 10;
+                height = 10;
+                break;
+        }
+        System.out.println("Changed Gridsize to " + width + "x" + height);
+        System.out.println("GAME WAS RESET");
+        tile_size = (double) 600 / (double) width;
+        internal_board = new int[width][height];
+        tiles_to_turn = new int[width][height];
+        resetBoard(false);
+    }
+
+
 }
