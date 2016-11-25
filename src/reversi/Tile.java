@@ -16,13 +16,14 @@ public class Tile extends ImageView {
     private Image emptyTile_img = new Image(getClass().getResource("res/empty2.png").toExternalForm());
     private Image blackTile_img = new Image(getClass().getResource("res/black2.png").toExternalForm());
     private Image whiteTile_img = new Image(getClass().getResource("res/white2.png").toExternalForm());
+    private Image emptyPop_img = new Image(getClass().getResource("res/empty_pop.png").toExternalForm());
     private int tile_type;
 
     /**
      *
      * @param x Position in board coordinates. (ex. 8x8)
      * @param y see parameter "x"
-     * @param tile_type 0 = empty, 1 = white, 2 = black
+     * @param tile_type 0 = empty, 1 = white, 2 = black, 99 = help-pop
      */
     public Tile(int x, int y, int tile_type) {
         super();
@@ -37,6 +38,10 @@ public class Tile extends ImageView {
                 break;
             case 2:
                 setImage(blackTile_img);
+                this.tile_type = tile_type;
+                break;
+            case 99:
+                setImage(emptyPop_img);
                 this.tile_type = tile_type;
                 break;
             default:

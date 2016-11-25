@@ -15,14 +15,12 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    static public Scene scene;
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Reversi - (C) 2016 Sam Bokai");
-
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-
-        Scene scene = new Scene(root, 600,630);
-
+        scene = new Scene(root, 600,630);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
