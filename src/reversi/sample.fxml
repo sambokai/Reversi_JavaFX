@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
 <?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import com.jfoenix.controls.JFXDialog?>
-<?import com.jfoenix.controls.JFXDialogLayout?>
-<?import javafx.scene.control.Label?>
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.DialogPane?>
-<?import javafx.scene.layout.StackPane?>
-
-
-
-<StackPane fx:id="root" stylesheets="@TabBarStylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reversi.GameBoardController" >
-<JFXTabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="600.0"  tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0" >
+<StackPane fx:id="root" stylesheets="@TabBarStylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reversi.GameBoardController">
+<JFXTabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0">
     <tabs>
         <Tab fx:id="gameTab" closable="false" text="Game">
          <content>
@@ -35,12 +32,12 @@
          <content>
                 <HBox fx:id="settingsHbox" prefHeight="100.0" prefWidth="200.0">
                    <children>
-                      <VBox fx:id="difficultyVBox" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                      <VBox fx:id="difficultyVBox" alignment="BASELINE_LEFT" minWidth="150.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
 
                          <children>
                             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Difficulty" textAlignment="CENTER">
                                <VBox.margin>
-                                  <Insets left="13.0" />
+                                  <Insets left="15.0" />
                                </VBox.margin>
                                <font>
                                   <Font size="21.0" />
@@ -58,7 +55,7 @@
                                </toggleGroup>
 
                             </JFXRadioButton>
-                            <JFXRadioButton fx:id="medium_radiobtn" selected="true" text="Medium" toggleGroup="$difficultyToggleGroup" stylesheets="@TabBarStylesheet.css">
+                            <JFXRadioButton fx:id="medium_radiobtn" selected="true" stylesheets="@TabBarStylesheet.css" text="Medium" toggleGroup="$difficultyToggleGroup">
                                <VBox.margin>
                                   <Insets left="-10.0" />
                                </VBox.margin>
@@ -76,10 +73,10 @@
                             </JFXRadioButton>
                          </children>
                          <HBox.margin>
-                            <Insets bottom="40.0" left="100.0" right="80.0" top="40.0" />
+                            <Insets bottom="50.0" left="150.0" right="5.0" top="50.0" />
                          </HBox.margin>
                       </VBox>
-                      <VBox fx:id="gridsizeVBox" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                      <VBox fx:id="gridsizeVBox" alignment="BASELINE_LEFT" minWidth="120.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                          <children>
                             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grid Size" textAlignment="CENTER">
                                <VBox.margin>
@@ -89,7 +86,7 @@
                                   <Font size="21.0" />
                                </font>
                             </Text>
-                            <JFXRadioButton  text="6x6">
+                            <JFXRadioButton text="6x6">
                                <VBox.margin>
                                   <Insets left="-10.0" />
                                </VBox.margin>
@@ -100,7 +97,7 @@
                                   <ToggleGroup fx:id="gridsizeToggleGroup" />
                                </toggleGroup>
                             </JFXRadioButton>
-                            <JFXRadioButton  text="8x8" toggleGroup="$gridsizeToggleGroup" selected="true">
+                            <JFXRadioButton selected="true" text="8x8" toggleGroup="$gridsizeToggleGroup">
                                <VBox.margin>
                                   <Insets left="-10.0" />
                                </VBox.margin>
@@ -108,7 +105,7 @@
                                   <Font size="20.0" />
                                </font>
                             </JFXRadioButton>
-                            <JFXRadioButton  text="10x10" toggleGroup="$gridsizeToggleGroup">
+                            <JFXRadioButton text="10x10" toggleGroup="$gridsizeToggleGroup">
                                <VBox.margin>
                                   <Insets left="-10.0" />
                                </VBox.margin>
@@ -118,10 +115,31 @@
                             </JFXRadioButton>
                          </children>
                          <HBox.margin>
-                            <Insets bottom="40.0" left="80.0" right="80.0" top="40.0" />
+                            <Insets bottom="50.0" left="5.0" right="5.0" top="50.0" />
                          </HBox.margin>
                       </VBox>
+                     <VBox minWidth="150.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                        <children>
+                           <JFXToggleButton fx:id="showHelpButton" contentDisplay="BOTTOM" prefHeight="93.0" prefWidth="160.0" text="Show Help" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                              <VBox.margin>
+                                 <Insets top="-3.0" />
+                              </VBox.margin>
+                              <font>
+                                 <Font size="21.0" />
+                              </font>
+                              <toggleGroup>
+                                 <ToggleGroup fx:id="showHelpToggleGroup" />
+                              </toggleGroup>
+                           </JFXToggleButton>
+                        </children>
+                        <HBox.margin>
+                           <Insets bottom="50.0" left="5.0" right="150.0" top="50.0" />
+                        </HBox.margin>
+                     </VBox>
                    </children>
+                  <padding>
+                     <Insets bottom="250.0" top="250.0" />
+                  </padding>
                 </HBox>
          </content>
         </Tab>
@@ -142,5 +160,8 @@
                 </JFXButton>
             </actions>
         </JFXDialogLayout>
+      <StackPane.margin>
+         <Insets />
+      </StackPane.margin>
     </JFXDialog>
 </StackPane>

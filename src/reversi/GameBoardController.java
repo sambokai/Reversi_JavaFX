@@ -3,6 +3,7 @@ package reversi;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXTabPane;
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -24,12 +25,14 @@ public class GameBoardController implements Initializable {
 
     @FXML private ToggleGroup difficultyToggleGroup;
     @FXML private ToggleGroup gridsizeToggleGroup;
+    @FXML private ToggleGroup showHelpToggleGroup;
     @FXML private Pane gamePane;
     @FXML private JFXDialog gridChangeDialog;
     @FXML private StackPane root;
     @FXML private JFXButton acceptButton;
     @FXML private JFXButton cancelButton;
     @FXML private JFXTabPane tabPane;
+    @FXML private JFXToggleButton showHelpButton;
 
     private Group tileGroup = new Group();
 
@@ -45,6 +48,7 @@ public class GameBoardController implements Initializable {
     int difficulty;
     int white_tiles;
     int black_tiles;
+    boolean showHelp = false;
 
 
     static double tile_size;
@@ -58,7 +62,6 @@ public class GameBoardController implements Initializable {
         updateUserGridsize();
         updateUserDifficulty();
         resetBoard(false);
-
         printCurrentPlayer();
         updateScore();
 
@@ -75,17 +78,32 @@ public class GameBoardController implements Initializable {
                 gridChangeDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
                 gridChangeDialog.show(root);
                 gridChangeDialog.setOverlayClose(false);
-                cancelButton.setOnMouseClicked((e)->{
+                cancelButton.setOnMouseClicked((e) -> {
                     oldValue.setSelected(true);
                     gridChangeDialog.close();
                 });
 
-                acceptButton.setOnMouseClicked((e)->{
+                acceptButton.setOnMouseClicked((e) -> {
                     updateUserGridsize();
                     gridChangeDialog.close();
                     tabPane.getSelectionModel().select(0);
                 });
             }
+        });
+
+
+        showHelpToggleGroup.selectedToggleProperty().addListener((ov, toggle, new_toggle) -> {
+
+            if (new_toggle == null) {
+                showHelp = false;
+                updateHelpPops();
+                updateRender();
+            } else {
+                showHelp = true;
+                updateHelpPops();
+                updateRender();
+            }
+
         });
 
     }
@@ -130,8 +148,6 @@ public class GameBoardController implements Initializable {
 //            }
             updateScore();
         }
-
-
         updateHelpPops();
         updateRender();
         return 0;
@@ -224,16 +240,12 @@ public class GameBoardController implements Initializable {
                 if (internal_board[x][y] == 99) {
                     internal_board[x][y] = 0;
                 }
-            }
-        }
-
-        for (int x = 0; x < width; x++){
-            for (int y = 0; y < height; y++) {
-                if (checkAllDirections(x,y,false)){
+                if (showHelp && checkAllDirections(x,y,false)){
                     internal_board[x][y] = 99;
                 }
             }
         }
+
     }
 
     /**
@@ -273,8 +285,10 @@ public class GameBoardController implements Initializable {
         tileGroup.getChildren().clear(); //WICHTIG! um memoryleaks zu verhindern.
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                Tile tile = new Tile(x,y,internal_board[x][y]);
-                tileGroup.getChildren().add(tile);
+
+                    Tile tile = new Tile(x, y, internal_board[x][y]);
+                    tileGroup.getChildren().add(tile);
+
             }
         }
 
