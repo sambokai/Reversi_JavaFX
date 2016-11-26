@@ -61,7 +61,7 @@ public class GameBoardController implements Initializable {
         updateUserDifficulty();
         resetBoard(false);
         printCurrentPlayer();
-        updateScore();
+        updateScore(true);
 
         gamePane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -144,6 +144,7 @@ public class GameBoardController implements Initializable {
             if (!anyMovePossible()){
                 System.out.println("Player " + current_player + " has NO LEGAL MOVE.");
                 alternatePlayers();
+                checkForGameOver();
             }
         }
 
@@ -151,7 +152,7 @@ public class GameBoardController implements Initializable {
 
 
 
-        updateScore();
+        updateScore(true);
         updateHelpPops();
         updateRender();
         return 0;
@@ -242,6 +243,25 @@ public class GameBoardController implements Initializable {
         return false;
     }
 
+    private boolean checkForGameOver(){
+        if (!anyMovePossible()){
+            System.out.println("\nGAME OVER\n");
+            updateScore(false);
+
+            //announce winner
+            if (white_tiles > black_tiles) {
+                System.out.println("WHITE WINS!");
+            } else if (black_tiles > white_tiles) {
+                System.out.println("BLACK WINS!");
+            } else if (black_tiles == white_tiles){
+                System.out.println("TIE");
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private boolean isOnBoard(int x, int y){
         return x >= 0 && x < width && y >= 0 && y < height;
     }
@@ -311,7 +331,7 @@ public class GameBoardController implements Initializable {
     /**
      * Aktualisiert den Punktestand indem es alle Steine zählt und die jeweiligen Spielerscores erneuert
      */
-    private void updateScore(){
+    private void updateScore(boolean printToConsole){
         //TODO: implementiere GUI-punkteanzeige
         white_tiles = 0;
         black_tiles = 0;
@@ -324,8 +344,10 @@ public class GameBoardController implements Initializable {
                 }
             }
         }
-        System.out.println("WHITE: " + white_tiles);
-        System.out.println("BLACK: " + black_tiles);
+        if (printToConsole) {
+            System.out.println("WHITE: " + white_tiles);
+            System.out.println("BLACK: " + black_tiles);
+        }
     }
 
 
@@ -345,7 +367,6 @@ public class GameBoardController implements Initializable {
     private void printCurrentPlayer(){
         //DEBUG
         System.out.println("\n\n");
-        System.out.println("3x3 = " + internal_board[3][3]);
         if (current_player == 1) System.out.println("It's WHITE's turn!");
         else if (current_player == 2) System.out.println("It's BLACK's turn!");
     }
