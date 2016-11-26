@@ -43,10 +43,10 @@ import javafx.scene.shape.*;
  */
 public class Tile extends ImageView {
 
-    private Image emptyTile_img = new Image(getClass().getResource("res/empty2.png").toExternalForm());
-    private Image blackTile_img = new Image(getClass().getResource("res/black2.png").toExternalForm());
-    private Image whiteTile_img = new Image(getClass().getResource("res/white2.png").toExternalForm());
-    private Image emptyPop_img = new Image(getClass().getResource("res/empty_pop.png").toExternalForm());
+    private Image emptyTile_img = new Image(getClass().getResource("res/empty100.png").toExternalForm());
+    private Image blackTile_img = new Image(getClass().getResource("res/black100_shadow.png").toExternalForm());
+    private Image whiteTile_img = new Image(getClass().getResource("res/white100_shadow.png").toExternalForm());
+    private Image emptyPop_img = new Image(getClass().getResource("res/help_pop100.png").toExternalForm());
     private int tile_type;
 
     /**

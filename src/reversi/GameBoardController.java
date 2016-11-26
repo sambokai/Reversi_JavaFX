@@ -33,6 +33,7 @@ package reversi;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXTabPane;
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -67,6 +68,7 @@ public class GameBoardController implements Initializable {
     @FXML private JFXButton cancelButton;
     @FXML private JFXButton newGameButton;
     @FXML private JFXTabPane tabPane;
+    @FXML private JFXToggleButton showHelpButton;
 
     private Group tileGroup = new Group();
 
@@ -82,7 +84,7 @@ public class GameBoardController implements Initializable {
     int difficulty;
     int white_tiles;
     int black_tiles;
-    boolean showHelp = false;
+    boolean showHelp;
 
 
     static double tile_size;
@@ -92,6 +94,8 @@ public class GameBoardController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        showHelp = true;
+        showHelpButton.setSelected(showHelp);
         gamePane.getChildren().setAll(tileGroup);
         updateUserGridsize();
         updateUserDifficulty();
@@ -127,20 +131,13 @@ public class GameBoardController implements Initializable {
 
 
         showHelpToggleGroup.selectedToggleProperty().addListener((ov, toggle, new_toggle) -> {
-
-            if (new_toggle == null) {
-                showHelp = false;
-                updateHelpPops();
-                updateRender();
-            } else {
-                showHelp = true;
-                updateHelpPops();
-                updateRender();
-            }
+            updateUserShowHelpPop(new_toggle);
 
         });
 
     }
+
+
 
     private void mouseSetTile(MouseEvent mouse) {
         int x = mouseXtoTileX(mouse.getX()), y = mouseYtoTileY(mouse.getY());
@@ -294,7 +291,11 @@ public class GameBoardController implements Initializable {
             }
             System.out.println("Winner: " + winner);
 
-            gameoverDialogTitleLabel.setText("Game Over - " + winner + " wins!");
+            if (black_tiles != white_tiles) {
+                gameoverDialogTitleLabel.setText("Game Over - " + winner + " wins!");
+            } else {
+                gameoverDialogTitleLabel.setText("Game Over - TIE!");
+            }
             gameoverDialogBodyLabel.setText("End Score\nWhite: " + white_tiles + "\nBlack: " + black_tiles );
             gameoverDialogBodyLabel.setAlignment(Pos.CENTER_LEFT);
             gameOverDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
@@ -452,9 +453,24 @@ public class GameBoardController implements Initializable {
         current_player = 1;
         opposing_player = 2;
 
+        //TODO: make beginning player random
+
 
         updateHelpPops();
         updateRender();
+    }
+
+    private void updateUserShowHelpPop(Toggle new_toggle){
+        if (new_toggle == null) {
+            showHelp = false;
+            updateHelpPops();
+            updateRender();
+        } else {
+            showHelp = true;
+            updateHelpPops();
+            updateRender();
+
+        }
     }
 
     private int updateUserDifficulty(){
