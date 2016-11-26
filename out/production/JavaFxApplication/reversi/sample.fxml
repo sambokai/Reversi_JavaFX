@@ -30,10 +30,10 @@
             <JFXDialog fx:id="gameOverDialog" styleClass="gameoverdialog">
                 <JFXDialogLayout>
                     <heading>
-                        <Label styleClass="gamoverDialogTitle">Game Over</Label>
+                        <Label fx:id="gameoverDialogTitleLabel" styleClass="gamoverDialogTitle">Game Over</Label>
                     </heading>
                     <body>
-                        <Label styleClass="gameoverDialogBody">TEST</Label>
+                        <Label fx:id="gameoverDialogBodyLabel" styleClass="gameoverDialogBody">TEST</Label>
                     </body>
                     <actions>
                         <JFXButton fx:id="newGameButton" styleClass="dialog-newgame">NEW GAME

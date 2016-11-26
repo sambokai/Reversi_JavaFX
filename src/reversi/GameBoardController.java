@@ -8,7 +8,9 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
@@ -28,6 +30,8 @@ public class GameBoardController implements Initializable {
     @FXML private Pane gamePane;
     @FXML private JFXDialog gridChangeDialog;
     @FXML private JFXDialog gameOverDialog;
+    @FXML private Label gameoverDialogTitleLabel;
+    @FXML private Label gameoverDialogBodyLabel;
     @FXML private StackPane root;
     @FXML private JFXButton acceptButton;
     @FXML private JFXButton cancelButton;
@@ -249,19 +253,23 @@ public class GameBoardController implements Initializable {
             System.out.println("\nGAME OVER\n");
             updateScore(false);
 
+            String winner = "";
             //announce winner
             if (white_tiles > black_tiles) {
-                System.out.println("WHITE WINS!");
+                winner = "White";
             } else if (black_tiles > white_tiles) {
-                System.out.println("BLACK WINS!");
+                winner = "Black";
             } else if (black_tiles == white_tiles){
-                System.out.println("TIE");
+                winner = "TIE";
             }
+            System.out.println("Winner: " + winner);
 
-
+            gameoverDialogTitleLabel.setText("Game Over - " + winner + " wins!");
+            gameoverDialogBodyLabel.setText("End Score\nWhite: " + white_tiles + "\nBlack: " + black_tiles );
+            gameoverDialogBodyLabel.setAlignment(Pos.CENTER_LEFT);
             gameOverDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
-            gameOverDialog.show(root);
             gameOverDialog.setOverlayClose(false);
+            gameOverDialog.show(root);
             newGameButton.setOnMouseClicked((e) -> {
                 resetBoard(false);
                 gameOverDialog.close();

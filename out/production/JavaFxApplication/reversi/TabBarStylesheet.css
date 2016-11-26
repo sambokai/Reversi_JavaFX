@@ -34,6 +34,9 @@
 
 .gridDialogBody,
 .gameoverDialogBody{
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+    -fx-tile-alignment: center-left;
 }
 
 
