@@ -58,8 +58,10 @@ public class GameBoardController implements Initializable {
         updateUserGridsize();
         updateUserDifficulty();
         resetBoard(false);
+
         printCurrentPlayer();
         updateScore();
+
         gamePane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouse) {
@@ -111,13 +113,13 @@ public class GameBoardController implements Initializable {
     private int placePiece(int x , int y) {
         updateOpposingPlayer();
 
-        //Check if spot is full
+        //if spot is full leave the placepiece method
         if (internal_board[x][y] != 0 && internal_board[x][y] !=99) {
             return -1;
         }
 
         //Check if any moves are possible - If yes update tiles_to_turn accordingly, set the clicked tile, alternate current_player, and reverse all legally marked tiles
-        if (checkAllDirections(x,y)) {
+        if (checkAllDirections(x,y, true)) {
             //nur setTile() FALLS der zug legal war
             setTile(x,y,current_player);
             reverseAllMarkedTiles();
@@ -129,10 +131,24 @@ public class GameBoardController implements Initializable {
             updateScore();
         }
 
+
+        updateHelpPops();
+        updateRender();
         return 0;
     }
 
-    private boolean checkAllDirections(int x, int y){
+    /**
+     *
+     * @param x
+     * @param y
+     * @param setTiles legt fest ob nur geprüft werden soll, ob ein zug möglich ist ODER ob die steine im möglichen zug auch gesetzt werden sollen (tilesToTurn method wird belegt)
+     * @return
+     */
+    private boolean checkAllDirections(int x, int y, boolean setTiles){
+        //falls der geklickte tile bereits mit einem stein belegt ist, brich die methode ab
+        if (internal_board[x][y] != 0 && internal_board[x][y] != 99) {
+            return false;
+        }
         //hat mindestens einen gültigen pfad
         boolean hasAValidPath = false;
         reversi.Direction[] compass = new reversi.Direction[8];
@@ -159,7 +175,7 @@ public class GameBoardController implements Initializable {
                 if (isOnBoard(x_pos, y_pos)
                 && internal_board[x_pos][y_pos] == opposing_player){
                     //speicher die coordinate des schrittes vorübergehend
-                    temp_reverse[x_pos][y_pos] = 1;
+                        temp_reverse[x_pos][y_pos] = 1;
                     x_pos += compass[i].getDx();
                     y_pos += compass[i].getDy();
 
@@ -172,14 +188,19 @@ public class GameBoardController implements Initializable {
                         } else if (internal_board[x_pos][y_pos] == current_player){
                             hasAValidPath = true;
 
-                            // ... füge die temporär getrackten steine dem finalen tiles_to_turn hinzu ...
-                            for (int print_x = 0; print_x < width; print_x++) {
-                                for (int print_y = 0; print_y < height; print_y++) {
-                                    if (temp_reverse[print_x][print_y] == 1) {
-                                        tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                            //falls steine auch gesetzt werden sollen
+                            if (setTiles) {
+                                // ... füge die temporär getrackten steine dem finalen tiles_to_turn hinzu ...
+                                for (int print_x = 0; print_x < width; print_x++) {
+                                    for (int print_y = 0; print_y < height; print_y++) {
+                                        if (temp_reverse[print_x][print_y] == 1) {
+                                            tiles_to_turn[print_x][print_y] = temp_reverse[print_x][print_y];
+                                        }
                                     }
                                 }
                             }
+
+
                             // und beende die suche in die aktuelle richtung
                             break;
                         }
@@ -195,6 +216,24 @@ public class GameBoardController implements Initializable {
 
     private boolean isOnBoard(int x, int y){
         return x >= 0 && x < width && y >= 0 && y < height;
+    }
+
+    private void updateHelpPops(){
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++) {
+                if (internal_board[x][y] == 99) {
+                    internal_board[x][y] = 0;
+                }
+            }
+        }
+
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++) {
+                if (checkAllDirections(x,y,false)){
+                    internal_board[x][y] = 99;
+                }
+            }
+        }
     }
 
     /**
@@ -219,31 +258,27 @@ public class GameBoardController implements Initializable {
      */
     public void setTile(int x, int y, int player){
         internal_board[x][y] = player;
-        updateRender();
-
-
     }
 
     public void reverseTile(int x, int y) {
 
         if (internal_board[x][y] == 1) {
-            internal_board[x][y] = 2;
+            setTile(x,y, 2);
         } else if (internal_board[x][y] == 2) {
-            internal_board[x][y] = 1;
+            setTile(x,y, 1);
         } else return;
-
-        updateRender();
     }
 
     public void updateRender() {
         tileGroup.getChildren().clear(); //WICHTIG! um memoryleaks zu verhindern.
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-
                 Tile tile = new Tile(x,y,internal_board[x][y]);
                 tileGroup.getChildren().add(tile);
             }
         }
+
+
 
     }
 
@@ -285,6 +320,7 @@ public class GameBoardController implements Initializable {
     private void printCurrentPlayer(){
         //DEBUG
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("3x3 = " + internal_board[3][3]);
         if (current_player == 1) System.out.println("It's WHITE's turn!");
         else if (current_player == 2) System.out.println("It's BLACK's turn!");
     }
@@ -317,6 +353,8 @@ public class GameBoardController implements Initializable {
         }
         current_player = 1;
         opposing_player = 2;
+
+        updateHelpPops();
         updateRender();
     }
 
