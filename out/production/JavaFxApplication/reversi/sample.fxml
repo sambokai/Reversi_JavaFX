@@ -25,7 +25,26 @@
 
          </content>
          <content>
-            <Pane fx:id="gamePane" prefHeight="200.0" prefWidth="200.0" stylesheets="@TabBarStylesheet.css" />
+            <Pane fx:id="gamePane" prefHeight="200.0" prefWidth="200.0" stylesheets="@TabBarStylesheet.css">
+
+            <JFXDialog fx:id="gameOverDialog" styleClass="gameoverdialog">
+                <JFXDialogLayout>
+                    <heading>
+                        <Label styleClass="gamoverDialogTitle">Game Over</Label>
+                    </heading>
+                    <body>
+                        <Label styleClass="gameoverDialogBody">TEST</Label>
+                    </body>
+                    <actions>
+                        <JFXButton fx:id="newGameButton" styleClass="dialog-newgame">NEW GAME
+                        </JFXButton>
+                    </actions>
+                </JFXDialogLayout>
+                <StackPane.margin>
+                    <Insets />
+                </StackPane.margin>
+            </JFXDialog>
+            </Pane>
          </content>
         </Tab>
         <Tab fx:id="settingsTab" closable="false" text="Settings">
@@ -145,23 +164,23 @@
         </Tab>
     </tabs>
 </JFXTabPane>
-    <JFXDialog fx:id="gridChangeDialog" styleClass="gridchangedialog">
-        <JFXDialogLayout>
-            <heading>
-                <Label styleClass="gridDialogTitle">New Game?</Label>
-            </heading>
-            <body>
-                <Label styleClass="gridDialogBody">Changing the Gridsize CANCELS your current Game. Do you want to proceed?</Label>
-            </body>
-            <actions>
-                <JFXButton fx:id="cancelButton" styleClass="dialog-cancel">Cancel
-                </JFXButton>
-                <JFXButton fx:id="acceptButton" styleClass="dialog-accept">NEW GAME
-                </JFXButton>
-            </actions>
-        </JFXDialogLayout>
-      <StackPane.margin>
-         <Insets />
-      </StackPane.margin>
-    </JFXDialog>
+<JFXDialog fx:id="gridChangeDialog" styleClass="gridchangedialog">
+    <JFXDialogLayout>
+        <heading>
+            <Label styleClass="gridDialogTitle">New Game?</Label>
+        </heading>
+        <body>
+            <Label styleClass="gridDialogBody">Changing the Gridsize CANCELS your current Game. Do you want to proceed?</Label>
+        </body>
+        <actions>
+            <JFXButton fx:id="cancelButton" styleClass="dialog-cancel">Cancel
+            </JFXButton>
+            <JFXButton fx:id="acceptButton" styleClass="dialog-accept">NEW GAME
+            </JFXButton>
+        </actions>
+    </JFXDialogLayout>
+  <StackPane.margin>
+     <Insets />
+  </StackPane.margin>
+</JFXDialog>
 </StackPane>

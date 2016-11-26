@@ -21,16 +21,19 @@
 }
 
 
-.gridchangedialog {
-    -fx-background-color: rgba(0, 0, 0, 0.65);
+.gridchangedialog,
+.gameoverdialog{
+    -fx-background-color: rgba(0, 0, 0, 0.73);
 }
 
-.gridDialogTitle{
+.gridDialogTitle,
+.gamoverDialogTitle{
     -fx-font-size: 140%;
     -fx-font-weight: BOLD;
 }
 
-.gridDialogBody{
+.gridDialogBody,
+.gameoverDialogBody{
 }
 
 

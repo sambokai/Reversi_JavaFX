@@ -27,9 +27,11 @@ public class GameBoardController implements Initializable {
     @FXML private ToggleGroup showHelpToggleGroup;
     @FXML private Pane gamePane;
     @FXML private JFXDialog gridChangeDialog;
+    @FXML private JFXDialog gameOverDialog;
     @FXML private StackPane root;
     @FXML private JFXButton acceptButton;
     @FXML private JFXButton cancelButton;
+    @FXML private JFXButton newGameButton;
     @FXML private JFXTabPane tabPane;
 
     private Group tileGroup = new Group();
@@ -146,13 +148,16 @@ public class GameBoardController implements Initializable {
                 alternatePlayers();
                 checkForGameOver();
             }
+            updateScore(true);
+        } else {
+            System.out.println("Can't play this move.");
         }
 
 
 
 
 
-        updateScore(true);
+
         updateHelpPops();
         updateRender();
         return 0;
@@ -206,10 +211,6 @@ public class GameBoardController implements Initializable {
                             y_pos += compass[i].getDy();
                     }
 
-//                    if (isOnBoard(x_pos,y_pos) && internal_board[x_pos][y_pos] == 0) {
-//                        break;
-//                    }
-
                     if (isOnBoard(x_pos,y_pos) && internal_board[x_pos][y_pos] == current_player){
                         hasAValidPath = true;
                         //falls steine auch gesetzt werden sollen
@@ -256,6 +257,17 @@ public class GameBoardController implements Initializable {
             } else if (black_tiles == white_tiles){
                 System.out.println("TIE");
             }
+
+
+            gameOverDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
+            gameOverDialog.show(root);
+            gameOverDialog.setOverlayClose(false);
+            newGameButton.setOnMouseClicked((e) -> {
+                resetBoard(false);
+                gameOverDialog.close();
+            });
+
+
             return true;
         } else {
             return false;
@@ -385,6 +397,8 @@ public class GameBoardController implements Initializable {
      */
     private void resetBoard(boolean debug) {
         internal_board = new int[width][height];
+        tiles_to_turn = new int[width][height];
+
         internal_board[(int) (width/(float)2-0.5)][(int) (height/(float)2-0.5)] = 1;
         internal_board[(int) (width/(float)2+0.5)][(int) (height/(float)2-0.5)] = 2;
         internal_board[(int) (width/(float)2-0.5)][(int) (height/(float)2+0.5)] = 2;
@@ -399,6 +413,7 @@ public class GameBoardController implements Initializable {
         }
         current_player = 1;
         opposing_player = 2;
+
 
         updateHelpPops();
         updateRender();
