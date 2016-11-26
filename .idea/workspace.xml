@@ -7,12 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/TabBarStylesheet.css" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/TabBarStylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/Direction.java" afterPath="$PROJECT_DIR$/src/reversi/Direction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/GameBoardController.java" afterPath="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/Main.java" afterPath="$PROJECT_DIR$/src/reversi/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" afterPath="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/Tile.java" afterPath="$PROJECT_DIR$/src/reversi/Tile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/sample.fxml" afterPath="$PROJECT_DIR$/src/reversi/sample.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -80,25 +81,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="278" column="24" selection-start-line="278" selection-start-column="24" selection-end-line="278" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding>
                 <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#2175#2176#0" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
-                <element signature="e#3757#3758#0" expanded="true" />
-                <element signature="e#3801#3802#0" expanded="true" />
+                <element signature="e#3767#3768#0" expanded="true" />
+                <element signature="e#3818#3819#0" expanded="true" />
+                <element signature="e#5349#5350#0" expanded="true" />
+                <element signature="e#5393#5394#0" expanded="true" />
                 <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#6425#6488#0" expanded="false" />
+                <element signature="e#8017#8080#0" expanded="false" />
                 <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-                <element signature="e#10791#10792#0" expanded="true" />
-                <element signature="e#10836#10837#0" expanded="true" />
+                <element signature="e#12383#12384#0" expanded="true" />
+                <element signature="e#12428#12429#0" expanded="true" />
                 <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
@@ -108,21 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JFXDialog.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/jfoenix.jar!/com/jfoenix/controls/JFXDialog.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="63" column="49" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            <state relative-caret-position="150">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,8 +140,8 @@
       <file leaf-file-name="TabBarStylesheet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/TabBarStylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -159,9 +150,11 @@
       <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="17" column="103" selection-start-line="17" selection-start-column="103" selection-end-line="17" selection-end-column="103" />
-              <folding />
+            <state relative-caret-position="645">
+              <caret line="47" column="103" selection-start-line="47" selection-start-column="103" selection-end-line="47" selection-end-column="103" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,10 +162,10 @@
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="32" column="62" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="62" />
+            <state relative-caret-position="105">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
               <folding>
-                <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
+                <marker date="1480196579000" expanded="false" signature="3364:9402" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,16 +174,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reversi/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
               <folding>
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#1841#1842#0" expanded="true" />
+                <element signature="e#1866#1867#0" expanded="true" />
+                <element signature="e#1892#1893#0" expanded="true" />
+                <element signature="e#1917#1918#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,12 +233,13 @@
         <option value="$PROJECT_DIR$/src/reversi/PieceType.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/reversi/Tile.java" />
-        <option value="$PROJECT_DIR$/src/reversi/Main.java" />
         <option value="$PROJECT_DIR$/src/reversi/Directions.java" />
-        <option value="$PROJECT_DIR$/src/reversi/Direction.java" />
-        <option value="$PROJECT_DIR$/src/reversi/sample.fxml" />
         <option value="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" />
         <option value="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
+        <option value="$PROJECT_DIR$/src/reversi/Main.java" />
+        <option value="$PROJECT_DIR$/src/reversi/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/reversi/Direction.java" />
+        <option value="$PROJECT_DIR$/LICENSE" />
       </list>
     </option>
   </component>
@@ -369,38 +363,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reversi_Java_SamBokai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reversi_Java_SamBokai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reversi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reversi_Java_SamBokai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reversi_Java_SamBokai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -422,9 +384,9 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/HTW_eclipse_workspace/Prog Methodology Stanford" />
+    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
+    <property name="settings.editor.splitter.proportion" value="0.20113085" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/HTW_eclipse_workspace/Prog-2 Java (Kosci)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -936,12 +898,12 @@
       <workItem from="1479903872977" duration="2762000" />
       <workItem from="1479924386007" duration="8513000" />
       <workItem from="1479986096989" duration="6998000" />
-      <workItem from="1480058513294" duration="31909000" />
+      <workItem from="1480058513294" duration="33334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125167000" />
+    <option name="totallyTimeSpent" value="126592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -965,8 +927,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715377" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32606325" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36590436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32606438" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36590436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253638" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16719915" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -1034,62 +996,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding>
-            <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
-            <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
-            <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
-            <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
-            <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/ReversiSquare.java" />
     <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding>
-            <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
+            <marker date="1480196579000" expanded="false" signature="3364:9402" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1104,17 +1017,17 @@
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
+            <element signature="e#8017#8080#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
             <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
@@ -1130,17 +1043,17 @@
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
+            <element signature="e#8017#8080#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
             <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
@@ -1154,7 +1067,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
+            <marker date="1480196579000" expanded="false" signature="3364:9402" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1170,17 +1083,17 @@
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
+            <element signature="e#8017#8080#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
             <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
@@ -1194,7 +1107,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
+            <marker date="1480196579000" expanded="false" signature="3364:9402" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1210,17 +1123,17 @@
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
+            <element signature="e#8017#8080#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
             <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
@@ -1236,17 +1149,17 @@
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
+            <element signature="e#8017#8080#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
             <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
@@ -1260,7 +1173,7 @@
         <state relative-caret-position="300">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
+            <marker date="1480196579000" expanded="false" signature="3364:9402" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1344,26 +1257,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/ReversiPiece.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -1398,24 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="17" column="103" selection-start-line="17" selection-start-column="103" selection-end-line="17" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -1435,33 +1310,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/jfoenix.jar!/com/jfoenix/controls/JFXDialog.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="285">
           <caret line="63" column="49" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="e#0#18234#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="62" />
+        <state relative-caret-position="105">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
           <folding>
-            <marker date="1480194976000" expanded="false" signature="2224:8262" ph="..." />
+            <marker date="1480196579000" expanded="false" signature="3364:9402" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1469,36 +1333,119 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="47" column="103" selection-start-line="47" selection-start-column="103" selection-end-line="47" selection-end-column="103" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/TabBarStylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="278" column="24" selection-start-line="278" selection-start-column="24" selection-end-line="278" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding>
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#6425#6488#0" expanded="false" />
+            <element signature="e#8017#8080#0" expanded="false" />
             <element signature="docComment;method#reverseAllMarkedTiles#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#setTile#0;class#GameBoardController#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
             <element signature="docComment;method#updateScore#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateOpposingPlayer#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#resetBoard#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+          <folding>
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1515,6 +1462,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>GNU GPL V3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1570,6 +1529,18 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>Unnamed</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
