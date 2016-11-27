@@ -45,6 +45,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -69,6 +70,10 @@ public class GameBoardController implements Initializable {
     @FXML private JFXButton newGameButton;
     @FXML private JFXTabPane tabPane;
     @FXML private JFXToggleButton showHelpButton;
+    @FXML private Label leftStatusBarLabel;
+    @FXML private Label rightStatusBarLabel;
+    @FXML private ImageView rightStatusBarImageView;
+    @FXML private ImageView leftStatusBarImageView;
 
     private Group tileGroup = new Group();
 
@@ -86,6 +91,8 @@ public class GameBoardController implements Initializable {
     int black_tiles;
     boolean showHelp;
 
+    final double NON_TRANSPARENT_STATUS = 0.95;
+    final double TRANSPARENT_STATUS = 0.3;
 
     static double tile_size;
     static int width;
@@ -100,7 +107,6 @@ public class GameBoardController implements Initializable {
         updateUserGridsize();
         updateUserDifficulty();
         resetBoard(false);
-        printCurrentPlayer();
         updateScore(true);
 
         gamePane.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -397,7 +403,9 @@ public class GameBoardController implements Initializable {
         }
         if (printToConsole) {
             System.out.println("WHITE: " + white_tiles);
+            rightStatusBarLabel.setText(Integer.toString(white_tiles));
             System.out.println("BLACK: " + black_tiles);
+            leftStatusBarLabel.setText(Integer.toString(black_tiles));
         }
     }
 
@@ -414,12 +422,28 @@ public class GameBoardController implements Initializable {
         printCurrentPlayer();
     }
 
+
+    private void updateStatusBarTransparency(){
+        if (current_player == 1){
+            rightStatusBarImageView.setOpacity(NON_TRANSPARENT_STATUS);
+            rightStatusBarLabel.setOpacity(NON_TRANSPARENT_STATUS);
+            leftStatusBarImageView.setOpacity(TRANSPARENT_STATUS);
+            leftStatusBarLabel.setOpacity(TRANSPARENT_STATUS);
+
+        } else if (current_player == 2) {
+            rightStatusBarImageView.setOpacity(TRANSPARENT_STATUS);
+            rightStatusBarLabel.setOpacity(TRANSPARENT_STATUS);
+            leftStatusBarImageView.setOpacity(NON_TRANSPARENT_STATUS);
+            leftStatusBarLabel.setOpacity(NON_TRANSPARENT_STATUS);
+        }
+    }
     //TODO: implementiere "spieler am zug" GUI-anzeige
     private void printCurrentPlayer(){
         //DEBUG
         System.out.println("\n\n");
         if (current_player == 1) System.out.println("It's WHITE's turn!");
         else if (current_player == 2) System.out.println("It's BLACK's turn!");
+        updateStatusBarTransparency();
     }
 
     public void updateOpposingPlayer(){
@@ -455,6 +479,9 @@ public class GameBoardController implements Initializable {
 
         //TODO: make beginning player random
 
+
+        rightStatusBarLabel.setText(Integer.toString(0));
+        leftStatusBarLabel.setText(Integer.toString(0));
 
         updateHelpPops();
         updateRender();
@@ -514,6 +541,7 @@ public class GameBoardController implements Initializable {
         tile_size = (double) 600 / (double) width; //TODO: dynamic window size
         internal_board = new int[width][height];
         tiles_to_turn = new int[width][height];
+        printCurrentPlayer();
         resetBoard(false);
     }
 

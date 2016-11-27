@@ -35,15 +35,24 @@
 .jfx-tab-pane .headers-region {
     -fx-background-color: #388E3C;
 }
+
+
 .jfx-tab-pane .tab-header-background {
     -fx-background-color: #388E3C;
 }
 .jfx-tab-pane .tab-selected-line {
     -fx-stroke: #EEFF41;
 }
-
 .jfx-tab-pane {
     -fx-background-color: #E8F5E9;
+}
+
+.gameBoard {
+    -fx-background-color: #66BB6A;
+}
+
+.gameStatusBarHBox{
+    -fx-background-color: #81C784;
 }
 
 .jfx-radio-button  {
@@ -68,7 +77,6 @@
     -fx-alignment: center-left;
     -fx-tile-alignment: center-left;
 }
-
 
 .dialog-accept{
     -fx-font-size: 110%;
