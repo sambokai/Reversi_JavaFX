@@ -34,6 +34,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXTabPane;
 import com.jfoenix.controls.JFXToggleButton;
+import javafx.animation.FadeTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -49,6 +50,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -91,12 +93,17 @@ public class GameBoardController implements Initializable {
     int black_tiles;
     boolean showHelp;
 
-    final double NON_TRANSPARENT_STATUS = 0.95;
-    final double TRANSPARENT_STATUS = 0.3;
-
     static double tile_size;
+
     static int width;
     static int height;
+
+    //Transitions
+    final double NON_TRANSPARENT_STATUS = 0.9;
+    final double TRANSPARENT_STATUS = 0.3;
+    final int STATUSBAR_FADE_TIME = 250; //milliseconds
+
+
 
 
     @Override
@@ -302,7 +309,7 @@ public class GameBoardController implements Initializable {
             } else {
                 gameoverDialogTitleLabel.setText("Game Over - TIE!");
             }
-            gameoverDialogBodyLabel.setText("End Score\nWhite: " + white_tiles + "\nBlack: " + black_tiles );
+            gameoverDialogBodyLabel.setText("End Score\n\nWhite: " + white_tiles + "\nBlack: " + black_tiles );
             gameoverDialogBodyLabel.setAlignment(Pos.CENTER_LEFT);
             gameOverDialog.setTransitionType(JFXDialog.DialogTransition.TOP);
             gameOverDialog.setOverlayClose(false);
@@ -374,8 +381,8 @@ public class GameBoardController implements Initializable {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
 
-                    Tile tile = new Tile(x, y, internal_board[x][y]);
-                    tileGroup.getChildren().add(tile);
+                Tile tile = new Tile(x, y, internal_board[x][y]);
+                tileGroup.getChildren().add(tile);
 
             }
         }
@@ -422,19 +429,45 @@ public class GameBoardController implements Initializable {
         printCurrentPlayer();
     }
 
-
+    @SuppressWarnings("Duplicates")
     private void updateStatusBarTransparency(){
+        //Transitions
+        FadeTransition rightStatusImageFade = new FadeTransition(Duration.millis(STATUSBAR_FADE_TIME), rightStatusBarImageView);
+        FadeTransition leftStatusImageFade = new FadeTransition(Duration.millis(STATUSBAR_FADE_TIME), leftStatusBarImageView);
+        FadeTransition rightStatusLabelFade = new FadeTransition(Duration.millis(STATUSBAR_FADE_TIME), rightStatusBarLabel);
+        FadeTransition leftStatusLabelFade = new FadeTransition(Duration.millis(STATUSBAR_FADE_TIME), leftStatusBarLabel);
+
         if (current_player == 1){
-            rightStatusBarImageView.setOpacity(NON_TRANSPARENT_STATUS);
-            rightStatusBarLabel.setOpacity(NON_TRANSPARENT_STATUS);
-            leftStatusBarImageView.setOpacity(TRANSPARENT_STATUS);
-            leftStatusBarLabel.setOpacity(TRANSPARENT_STATUS);
+            rightStatusImageFade.setFromValue(TRANSPARENT_STATUS);
+            rightStatusImageFade.setToValue(NON_TRANSPARENT_STATUS);
+            rightStatusImageFade.play();
+            rightStatusLabelFade.setFromValue(TRANSPARENT_STATUS);
+            rightStatusLabelFade.setToValue(NON_TRANSPARENT_STATUS);
+            rightStatusLabelFade.play();
+
+
+            leftStatusImageFade.setFromValue(NON_TRANSPARENT_STATUS);
+            leftStatusImageFade.setToValue(TRANSPARENT_STATUS);
+            leftStatusImageFade.play();
+            leftStatusLabelFade.setFromValue(NON_TRANSPARENT_STATUS);
+            leftStatusLabelFade.setToValue(TRANSPARENT_STATUS);
+            leftStatusLabelFade.play();
 
         } else if (current_player == 2) {
-            rightStatusBarImageView.setOpacity(TRANSPARENT_STATUS);
-            rightStatusBarLabel.setOpacity(TRANSPARENT_STATUS);
-            leftStatusBarImageView.setOpacity(NON_TRANSPARENT_STATUS);
-            leftStatusBarLabel.setOpacity(NON_TRANSPARENT_STATUS);
+
+            rightStatusImageFade.setFromValue(NON_TRANSPARENT_STATUS);
+            rightStatusImageFade.setToValue(TRANSPARENT_STATUS);
+            rightStatusImageFade.play();
+            rightStatusLabelFade.setFromValue(NON_TRANSPARENT_STATUS);
+            rightStatusLabelFade.setToValue(TRANSPARENT_STATUS);
+            rightStatusLabelFade.play();
+
+            leftStatusImageFade.setFromValue(TRANSPARENT_STATUS);
+            leftStatusImageFade.setToValue(NON_TRANSPARENT_STATUS);
+            leftStatusImageFade.play();
+            leftStatusLabelFade.setFromValue(TRANSPARENT_STATUS);
+            leftStatusLabelFade.setToValue(NON_TRANSPARENT_STATUS);
+            leftStatusLabelFade.play();
         }
     }
     //TODO: implementiere "spieler am zug" GUI-anzeige
