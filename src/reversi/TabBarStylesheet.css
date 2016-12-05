@@ -78,11 +78,9 @@
     -fx-tile-alignment: center-left;
 }
 
-.dialog-accept{
+.dialog-accept, .dialog-cancel, .dialog-newgame{
     -fx-font-size: 110%;
+    -fx-text-fill: #388E3C;
 }
 
-.dialog-cancel{
-    -fx-font-size: 110%;
-}
 /*TODO: Style the gridsize dialog. big title, centered text maybe*/

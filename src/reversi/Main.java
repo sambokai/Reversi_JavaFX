@@ -36,10 +36,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
 
     static public Scene scene;
     @Override
+    /**
+     * Startpunkt des JavaFX Programms
+     */
+
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Reversi - (C) 2016 Sam Bokai");
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -49,6 +54,7 @@ public class Main extends Application {
         primaryStage.show();
 
     }
+
 
     public static void main(String[] args) {
         launch(args);
