@@ -7,13 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/GameBoardController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/TabBarStylesheet.css" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/reversi/TabBarStylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/Direction.java" afterPath="$PROJECT_DIR$/src/reversi/Direction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/GameBoardController.java" afterPath="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/Main.java" afterPath="$PROJECT_DIR$/src/reversi/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" afterPath="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,12 +77,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameBoardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-505">
-              <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+            <state relative-caret-position="3705">
+              <caret line="679" column="0" selection-start-line="679" selection-start-column="0" selection-end-line="679" selection-end-column="0" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="docComment;field#difficultyToggleGroup#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -109,7 +107,6 @@
                 <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#placePiece#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-                <element signature="method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
                 <element signature="e#9988#10051#0" expanded="false" />
                 <element signature="docComment;method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
@@ -143,6 +140,14 @@
                 <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
                 <element signature="docComment;method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
                 <element signature="method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
+                <element signature="e#24078#24079#0" expanded="true" />
+                <element signature="e#24112#24113#0" expanded="true" />
+                <element signature="e#24147#24148#0" expanded="true" />
+                <element signature="e#24181#24182#0" expanded="true" />
+                <element signature="e#24217#24218#0" expanded="true" />
+                <element signature="e#24245#24246#0" expanded="true" />
+                <element signature="e#24282#24283#0" expanded="true" />
+                <element signature="e#24311#24312#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,13 +156,10 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2301#2302#0" expanded="true" />
-                <element signature="e#2329#2330#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,8 +168,8 @@
       <file leaf-file-name="TabBarStylesheet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/TabBarStylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+            <state relative-caret-position="0">
+              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -176,7 +178,7 @@
       <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
+            <state relative-caret-position="660">
               <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -188,8 +190,8 @@
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2145">
-              <caret line="227" column="36" selection-start-line="227" selection-start-column="30" selection-end-line="227" selection-end-column="36" />
+            <state relative-caret-position="375">
+              <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
               <folding>
                 <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#StackPane#0;n#!!top" expanded="false" />
                 <element signature="n#VBox#1;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#StackPane#0;n#!!top" expanded="false" />
@@ -220,14 +222,19 @@
       <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reversi/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-              <folding />
+            <state relative-caret-position="240">
+              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+              <folding>
+                <element signature="e#1842#1843#0" expanded="false" />
+                <element signature="e#1867#1868#0" expanded="false" />
+                <element signature="e#1893#1894#0" expanded="false" />
+                <element signature="e#1918#1919#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -285,9 +292,9 @@
         <option value="$PROJECT_DIR$/src/reversi/Tile.java" />
         <option value="$PROJECT_DIR$/src/reversi/sample.fxml" />
         <option value="$PROJECT_DIR$/src/reversi/TabBarStylesheet.css" />
-        <option value="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
         <option value="$PROJECT_DIR$/src/reversi/Main.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/reversi/GameBoardController.java" />
       </list>
     </option>
   </component>
@@ -310,8 +317,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="width" value="1766" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -377,7 +384,7 @@
       <pane id="Scope">
         <subPane subId="Project Files" />
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -456,7 +463,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -986,12 +993,13 @@
       <workItem from="1479924386007" duration="8513000" />
       <workItem from="1479986096989" duration="6998000" />
       <workItem from="1480058513294" duration="48756000" />
-      <workItem from="1480941647966" duration="2102000" />
+      <workItem from="1480941647966" duration="2316000" />
+      <workItem from="1481059578301" duration="268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144116000" />
+    <option name="totallyTimeSpent" value="144598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,23 +1011,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="0" y="23" width="1766" height="1052" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30769232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30512017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32439336" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715377" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03065134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.029850746" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32606325" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253638" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1351508" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1035,6 +1042,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32439336" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1089,6 +1097,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="docComment;field#difficultyToggleGroup#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1112,7 +1121,6 @@
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9988#10051#0" expanded="false" />
             <element signature="docComment;method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
@@ -1146,6 +1154,14 @@
             <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#24078#24079#0" expanded="true" />
+            <element signature="e#24112#24113#0" expanded="true" />
+            <element signature="e#24147#24148#0" expanded="true" />
+            <element signature="e#24181#24182#0" expanded="true" />
+            <element signature="e#24217#24218#0" expanded="true" />
+            <element signature="e#24245#24246#0" expanded="true" />
+            <element signature="e#24282#24283#0" expanded="true" />
+            <element signature="e#24311#24312#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1170,6 +1186,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="docComment;field#difficultyToggleGroup#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1193,7 +1210,6 @@
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9988#10051#0" expanded="false" />
             <element signature="docComment;method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
@@ -1227,6 +1243,14 @@
             <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#24078#24079#0" expanded="true" />
+            <element signature="e#24112#24113#0" expanded="true" />
+            <element signature="e#24147#24148#0" expanded="true" />
+            <element signature="e#24181#24182#0" expanded="true" />
+            <element signature="e#24217#24218#0" expanded="true" />
+            <element signature="e#24245#24246#0" expanded="true" />
+            <element signature="e#24282#24283#0" expanded="true" />
+            <element signature="e#24311#24312#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1251,6 +1275,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="docComment;field#difficultyToggleGroup#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1274,7 +1299,6 @@
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9988#10051#0" expanded="false" />
             <element signature="docComment;method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
@@ -1308,6 +1332,14 @@
             <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#24078#24079#0" expanded="true" />
+            <element signature="e#24112#24113#0" expanded="true" />
+            <element signature="e#24147#24148#0" expanded="true" />
+            <element signature="e#24181#24182#0" expanded="true" />
+            <element signature="e#24217#24218#0" expanded="true" />
+            <element signature="e#24245#24246#0" expanded="true" />
+            <element signature="e#24282#24283#0" expanded="true" />
+            <element signature="e#24311#24312#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1317,6 +1349,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="docComment;field#difficultyToggleGroup#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1340,7 +1373,6 @@
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9988#10051#0" expanded="false" />
             <element signature="docComment;method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
@@ -1374,6 +1406,14 @@
             <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#24078#24079#0" expanded="true" />
+            <element signature="e#24112#24113#0" expanded="true" />
+            <element signature="e#24147#24148#0" expanded="true" />
+            <element signature="e#24181#24182#0" expanded="true" />
+            <element signature="e#24217#24218#0" expanded="true" />
+            <element signature="e#24245#24246#0" expanded="true" />
+            <element signature="e#24282#24283#0" expanded="true" />
+            <element signature="e#24311#24312#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1493,10 +1533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="2494" column="0" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
-          <folding>
-            <element signature="e#66573#66574#0" expanded="false" />
-            <element signature="e#66619#66620#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1540,11 +1576,95 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+          <folding>
+            <element signature="e#1842#1843#0" expanded="false" />
+            <element signature="e#1867#1868#0" expanded="false" />
+            <element signature="e#1893#1894#0" expanded="false" />
+            <element signature="e#1918#1919#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/TabBarStylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
+          <folding>
+            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#StackPane#0;n#!!top" expanded="false" />
+            <element signature="n#VBox#1;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#StackPane#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/reversi/GameBoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+        <state relative-caret-position="3705">
+          <caret line="679" column="0" selection-start-line="679" selection-start-column="0" selection-end-line="679" selection-end-column="0" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="docComment;field#difficultyToggleGroup#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#internal_board#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;field#tiles_to_turn#0;class#GameBoardController#0" expanded="false" />
@@ -1568,7 +1688,6 @@
             <element signature="docComment;method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#placePiece#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
-            <element signature="method#checkAllDirections#0;class#GameBoardController#0" expanded="false" />
             <element signature="e#9988#10051#0" expanded="false" />
             <element signature="docComment;method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#anyMovePossible#0;class#GameBoardController#0" expanded="false" />
@@ -1602,88 +1721,15 @@
             <element signature="method#updateUserDifficulty#0;class#GameBoardController#0" expanded="false" />
             <element signature="docComment;method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
             <element signature="method#updateUserGridsize#0;class#GameBoardController#0" expanded="false" />
+            <element signature="e#24078#24079#0" expanded="true" />
+            <element signature="e#24112#24113#0" expanded="true" />
+            <element signature="e#24147#24148#0" expanded="true" />
+            <element signature="e#24181#24182#0" expanded="true" />
+            <element signature="e#24217#24218#0" expanded="true" />
+            <element signature="e#24245#24246#0" expanded="true" />
+            <element signature="e#24282#24283#0" expanded="true" />
+            <element signature="e#24311#24312#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
-            <element signature="e#2329#2330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/TabBarStylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2145">
-          <caret line="227" column="36" selection-start-line="227" selection-start-column="30" selection-end-line="227" selection-end-column="36" />
-          <folding>
-            <element signature="n#VBox#0;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#StackPane#0;n#!!top" expanded="false" />
-            <element signature="n#VBox#1;n#children#0;n#HBox#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#StackPane#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reversi/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

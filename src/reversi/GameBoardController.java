@@ -661,5 +661,37 @@ public class GameBoardController implements Initializable {
         resetBoard(false);
     }
 
+    /* GETTER für zukünftige AI-Gegner-Klasse */
+    public static int[][] getInternal_board() {
+        return internal_board;
+    }
+
+    public int getCurrent_player() {
+        return current_player;
+    }
+
+    public int getOpposing_player() {
+        return opposing_player;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public int getWhite_tiles() {
+        return white_tiles;
+    }
+
+    public int getBlack_tiles() {
+        return black_tiles;
+    }
+
+    public static int getWidth() {
+        return width;
+    }
+
+    public static int getHeight() {
+        return height;
+    }
 
 }
