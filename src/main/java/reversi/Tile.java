@@ -30,6 +30,7 @@
 
 package reversi;
 
+import java.util.Objects;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -43,10 +44,14 @@ import javafx.scene.shape.*;
  */
 public class Tile extends ImageView {
 
-    private Image emptyTile_img = new Image(getClass().getResource("res/empty100.png").toExternalForm());
-    private Image blackTile_img = new Image(getClass().getResource("res/black100_shadow.png").toExternalForm());
-    private Image whiteTile_img = new Image(getClass().getResource("res/white100_shadow.png").toExternalForm());
-    private Image emptyPop_img = new Image(getClass().getResource("res/help_pop100.png").toExternalForm());
+    private Image emptyTile_img = new Image(
+        Objects.requireNonNull(getClass().getClassLoader().getResource("empty100.png")).toExternalForm());
+    private Image blackTile_img = new Image(
+        Objects.requireNonNull(getClass().getClassLoader().getResource("black100_shadow.png")).toExternalForm());
+    private Image whiteTile_img = new Image(
+        Objects.requireNonNull(getClass().getClassLoader().getResource("white100_shadow.png")).toExternalForm());
+    private Image emptyPop_img = new Image(
+        Objects.requireNonNull(getClass().getClassLoader().getResource("help_pop100.png")).toExternalForm());
     private int tile_type;
 
     /**

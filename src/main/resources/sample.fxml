@@ -37,7 +37,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<StackPane fx:id="root" stylesheets="@TabBarStylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reversi.GameBoardController">
+<StackPane fx:id="root" stylesheets="TabBarStylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reversi.GameBoardController">
 <JFXTabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="670.0" minWidth="-Infinity" prefHeight="670.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0">
     <tabs>
         <Tab fx:id="gameTab" closable="false" text="Game">
@@ -47,7 +47,7 @@
          <content>
                <VBox>
                   <children>
-                  <Pane fx:id="gamePane" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0" styleClass="gameBoard" stylesheets="@TabBarStylesheet.css">
+                  <Pane fx:id="gamePane" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0" styleClass="gameBoard" stylesheets="TabBarStylesheet.css">
 
 
             </Pane>
@@ -55,7 +55,7 @@
                         <children>
                            <ImageView fx:id="leftStatusBarImageView" fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="leftStatusBarImageView">
                               <image>
-                                 <Image url="@res/black100_pieceonly.png" />
+                                 <Image url="@black100_pieceonly.png" />
                               </image>
                               <HBox.margin>
                                  <Insets left="200.0" />
@@ -85,7 +85,7 @@
                               </HBox.margin></Pane>
                            <ImageView fx:id="rightStatusBarImageView" fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="rightStatusBarImageView">
                               <image>
-                                 <Image url="@res/white100_pieceonly.png" />
+                                 <Image url="@white100_pieceonly.png" />
                               </image>
                               <HBox.margin>
                                  <Insets right="200.0" />
@@ -124,7 +124,7 @@
                                </toggleGroup>
 
                             </JFXRadioButton>
-                            <JFXRadioButton fx:id="medium_radiobtn" selected="true" stylesheets="@TabBarStylesheet.css" text="Medium" toggleGroup="$difficultyToggleGroup">
+                            <JFXRadioButton fx:id="medium_radiobtn" selected="true" stylesheets="TabBarStylesheet.css" text="Medium" toggleGroup="$difficultyToggleGroup">
                                <VBox.margin>
                                   <Insets left="-10.0" />
                                </VBox.margin>
