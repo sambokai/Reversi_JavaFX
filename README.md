@@ -3,6 +3,9 @@ An implementation of Reversi/Othello written in Java using the JavaFX GUI-Framew
 
 This was part of a programming class in my first semester.
 
+### Video
+<a href="https://streamable.com/bmm0o"><img src="screencast.gif"  width="400"></a>
+
 ### Credits
 This application uses Open Source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
 
